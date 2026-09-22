@@ -1,0 +1,50 @@
+{
+  "execution": [
+    "Closed-loop execution and tool interfaces",
+    "What does the reasoning model output, how do tools connect to controllers, and when should the system observe and replan?"
+  ],
+  "memory": [
+    "Long-term memory and context",
+    "What history is stored, and how is it retrieved, compressed, and used to guide actions?"
+  ],
+  "verification": [
+    "State verification and failure monitoring",
+    "How can action completion, task success, and the need for recovery be distinguished?"
+  ],
+  "reflection": [
+    "Reflection, attribution, and recovery",
+    "How are failure causes identified and subsequent attempts changed?"
+  ],
+  "skills": [
+    "Skill and harness evolution",
+    "How can experience become transferable, verifiable skills without degrading existing capabilities?"
+  ],
+  "dual-system": [
+    "Fast and slow systems and real-time execution",
+    "At what frequencies do reasoning, action generation, playback, and feedback operate?"
+  ],
+  "policy-learning": [
+    "Policy learning and autonomous data loops",
+    "How does environment feedback enter training, reset, and redeployment?"
+  ],
+  "simulation": [
+    "Digital twins and simulation validation",
+    "How can physical exploration costs be reduced and transfer be tested?"
+  ],
+  "fleet": [
+    "Multi-robot collaboration and collective learning",
+    "What evidence supports shared state, shared skills, and shared weights, respectively?"
+  ],
+  "safety": [
+    "Runtime constraints and safety",
+    "How are task constraints enforced during routing, contact, resource use, and fallback?"
+  ],
+  "evaluation": [
+    "Evaluation and reproducibility",
+    "Are interfaces, perception access, budgets, perturbations, and data splits matched?"
+  ],
+  "transfer": [
+    "Methods from general-purpose agents",
+    "Which software-agent mechanisms are worth transferring to physical execution?"
+  ]
+}

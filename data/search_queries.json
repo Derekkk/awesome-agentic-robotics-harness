@@ -1,0 +1,9 @@
+{
+  "queries": [
+    "(cat:cs.RO OR cat:cs.AI) AND (all:harness OR all:agentic OR all:\"code-as-policy\")",
+    "cat:cs.RO AND (all:memory OR all:reflection OR all:\"self-evolving\" OR all:\"in-context\")",
+    "cat:cs.RO AND (all:\"dual-system\" OR all:\"digital twin\" OR all:fleet OR all:\"autonomous reset\")",
+    "(cat:cs.CL OR cat:cs.MA OR cat:cs.SE) AND (ti:harness OR ti:\"skill evolution\")"
+  ],
+  "notes": "High-recall discovery only. Validate relevance manually; supplement with official projects and conference proceedings."
+}

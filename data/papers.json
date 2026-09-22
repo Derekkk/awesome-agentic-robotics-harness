@@ -1,0 +1,1360 @@
+[
+  {
+    "id": "2609.20822",
+    "name": "SafeHarness",
+    "title": "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
+    "published": "2026-09-17",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Bingxin Xu",
+      "Yuzhang Shang",
+      "Zhen Dong",
+      "Emilio Ferrara"
+    ],
+    "tags": [
+      "safety",
+      "execution",
+      "verification"
+    ],
+    "interface": "obstacle-aware code",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2609.20822",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2609.20822"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Turns obstacle-avoidance requirements into action choices during routing and contact, combining waypoint validation with replanning.",
+    "caveat_en": "Report task success and collision avoidance separately; neither constitutes a formal safety guarantee."
+  },
+  {
+    "id": "2609.19413",
+    "name": "HALTER",
+    "title": "From Rollout to Reset: A Graph-Based Harness for Autonomous Long-Horizon Manipulation Evaluation",
+    "published": "2026-09-16",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Jing Jiang",
+      "Yue Yang",
+      "Xinkai Jiang",
+      "Gedas Bertasius",
+      "Daniel J. Szafir",
+      "Rudolf Lioutikov"
+    ],
+    "tags": [
+      "verification",
+      "evaluation",
+      "policy-learning"
+    ],
+    "interface": "scene graph + reset skills",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2609.19413",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2609.19413"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Builds scene graphs and composes atomic reset skills for automatic scoring, reset planning, and reset verification in long-horizon evaluation.",
+    "caveat_en": "Reset accuracy differs from policy task success; the evaluation initial-state distribution must also be recorded."
+  },
+  {
+    "id": "2609.19138",
+    "name": "GPT-Policy",
+    "title": "In-Context Robot Learning with VLM Agents",
+    "published": "2026-09-16",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Dongzhou Cheng",
+      "Taoran Yi",
+      "Ye Fang",
+      "Xingwu Zhang",
+      "Fan Feng",
+      "Yixuan Li",
+      "Gengxiong Zhuang",
+      "Rongze Wang",
+      "Shuai Yang",
+      "Wei Song",
+      "Weizhi Xue",
+      "Minyan Wu",
+      "Jie Gui",
+      "Jiaqi Wang",
+      "Tong Wu"
+    ],
+    "tags": [
+      "execution",
+      "memory"
+    ],
+    "interface": "in-context robot-tool actions",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2609.19138",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2609.19138"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "A context compiler retains task-relevant visual transitions; a VLM proposes robot tool actions that a constrained controller checks and executes.",
+    "caveat_en": "Context adaptation is not parameter learning; distinguish human-video configurations from references that include actions."
+  },
+  {
+    "id": "2609.11561",
+    "name": "MaP-WAM",
+    "title": "Memory as Plans: World-Action Modeling with Memory-Grounded Planning",
+    "published": "2026-09-10",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Sizhe Zhao",
+      "Haozhe Xie",
+      "Weiyu Zhao",
+      "Chenchu Zhang",
+      "Huan Wang",
+      "Chenyang Wang",
+      "Qinglin Liu",
+      "Shengping Zhang"
+    ],
+    "tags": [
+      "memory",
+      "dual-system",
+      "verification"
+    ],
+    "interface": "memory-grounded plans",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2609.11561",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2609.11561"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Uses long histories for planning, compresses them into segment-level language and visual guidance, and predicts action chunks and execution progress with an action model.",
+    "caveat_en": "A fixed executor context does not mean that planner cost stays constant as history grows."
+  },
+  {
+    "id": "2609.11445",
+    "name": "FARM",
+    "title": "FARM: Reading Failure Signals from the Internal Predictive States of a Frozen Robotic World Model",
+    "published": "2026-09-10",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Haoran Pei",
+      "Mingrui Luo",
+      "Senbao Wang",
+      "Haoran Lv",
+      "Jie Guo",
+      "Sheng Zhong",
+      "Ruixi Ci"
+    ],
+    "tags": [
+      "verification",
+      "safety"
+    ],
+    "interface": "frozen world-model readout",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2609.11445",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/html/2609.11445v1"
+    ],
+    "metrics": [],
+    "code_url": "https://github.com/HaoranPei-casia/FARM",
+    "project_url": null,
+    "summary_en": "Freezes the VLA-JEPA predictive backbone and trains only a lightweight readout, producing failure scores from internal states and aggregating risk over observed history.",
+    "caveat_en": "The reported approximately 0.23 ms covers detection overhead after states are available; failure detection is not a recovery policy. Evaluate unseen-task performance separately."
+  },
+  {
+    "id": "2609.11225",
+    "name": "Harness Robotic OS",
+    "title": "Harness Robotic OS: A Unified Embodied-Agent Runtime for Closed-Loop Quadruped Inspection",
+    "published": "2026-09-10",
+    "revised": null,
+    "version": null,
+    "authors": [],
+    "tags": [
+      "execution",
+      "memory",
+      "safety"
+    ],
+    "interface": "inspection runtime",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2609.11225",
+    "verification": "primary_search_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2609.11225"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Organizes quadruped inspection skills, shared context, hierarchical memory, and controlled candidate updates into a unified runtime.",
+    "caveat_en": "System deployment metrics alone do not establish causal benefits from continual self-evolution."
+  },
+  {
+    "id": "2609.10522",
+    "name": "Show-Harness",
+    "title": "Show-Harness: Just a VLM Agent Can Play Robots",
+    "published": "2026-09-09",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Yanzhe Chen",
+      "Zechen Bai",
+      "Zhijun Cao",
+      "Wenzheng Zeng",
+      "Kevin Qinghong Lin",
+      "Yiqi Lin",
+      "Guoqiang Liang",
+      "Kevin Yuchen Ma",
+      "Qiming Huang",
+      "Mike Zheng Shou"
+    ],
+    "tags": [
+      "execution",
+      "evaluation"
+    ],
+    "interface": "semantic actions + interpreter",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2609.10522",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2609.10522"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "A VLM emits discrete semantic action units that an embodiment-specific interpreter deterministically converts into local actions, with GUI support for collecting demonstrations.",
+    "caveat_en": "Record zero-shot frontier-model configurations separately from fine-tuned smaller-model configurations."
+  },
+  {
+    "id": "2609.04280",
+    "name": "EvoHarnessBench",
+    "title": "EvoHarnessBench: Can Your Agents Keep Pace with an Evolving Harness?",
+    "published": "2026-09-03",
+    "revised": "2026-09-10",
+    "version": 2,
+    "authors": [
+      "Zixuan Ke",
+      "Vaidehi Patil",
+      "Haizhou Shi",
+      "Yang Li",
+      "Ye Liu",
+      "Sarath Shekkizhar",
+      "Anurag Koul",
+      "Jiayu Wang",
+      "Xuan Phi Nguyen",
+      "Semih Yavuz",
+      "Mohit Bansal",
+      "Shafiq Joty"
+    ],
+    "tags": [
+      "evaluation",
+      "transfer"
+    ],
+    "interface": "evolving tools/skills/agents",
+    "scope": "transfer",
+    "paper_url": "https://arxiv.org/abs/2609.04280",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2609.04280"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Expands an external harness in stages and separately evaluates retention of existing capabilities and adaptation to new ones.",
+    "caveat_en": "Forgetting in general-purpose agents motivates robotics hypotheses; it is not a robotics result."
+  },
+  {
+    "id": "2609.01437",
+    "name": "HarnessDev",
+    "title": "HarnessDev: Can LLMs Create and Evolve Their Own Agent Harness?",
+    "published": "2026-09-01",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Yuhao Wu",
+      "Jingyuan Zhang",
+      "Jiajun Shi",
+      "Xinping Lei",
+      "Qingshui Gu",
+      "Yuxuan Zhang",
+      "Zexuan Wang",
+      "Chen He",
+      "Chen Huang",
+      "Maojia Song",
+      "Zhiyuan Zeng",
+      "Shaowen Wang",
+      "Jinkai Liu",
+      "Yunfeng Shi",
+      "Jiaheng Liu",
+      "Shen Yan",
+      "Wenhao Huang",
+      "Ge Zhang",
+      "Wenxuan Zhang"
+    ],
+    "tags": [
+      "evaluation",
+      "transfer"
+    ],
+    "interface": "harness generation",
+    "scope": "transfer",
+    "paper_url": "https://arxiv.org/abs/2609.01437",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2609.01437"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Evaluates the capability and cost of building and improving executable harnesses, including held-out tasks and transfer across models.",
+    "caveat_en": "The evidence concerns general-purpose software agents; transfer to physical robots still requires experiments."
+  },
+  {
+    "id": "2609.00829",
+    "name": "HarnessEvolve",
+    "title": "HarnessEvolve: Learning from Reference Trajectories for Reliable Agent Self-Evolution",
+    "published": "2026-09-01",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Wen Jiang",
+      "Mingmin Chu",
+      "Yimeng Tian",
+      "Qianxin Zhang",
+      "Haofei Yang",
+      "Rui Yang",
+      "Yang Liu",
+      "Tao Lv",
+      "Fangming Li"
+    ],
+    "tags": [
+      "reflection",
+      "skills",
+      "transfer"
+    ],
+    "interface": "reference trajectory + gates",
+    "scope": "transfer",
+    "paper_url": "https://arxiv.org/abs/2609.00829",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2609.00829"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Uses reference trajectories for failure attribution and screens harness updates through quality and performance gates to reduce regressions.",
+    "caveat_en": "Reference trajectories use answer information; robotics settings must prevent leakage of privileged information."
+  },
+  {
+    "id": "2608.24115",
+    "name": "PonderPounce",
+    "title": "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control",
+    "published": "2026-08-25",
+    "revised": null,
+    "version": null,
+    "authors": [],
+    "tags": [
+      "memory",
+      "dual-system"
+    ],
+    "interface": "latent cognition",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2608.24115",
+    "verification": "official_project",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://worv-ai.github.io/ponderpounce/"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": "https://worv-ai.github.io/ponderpounce/",
+    "summary_en": "Maintains an episode in the native MLLM context and asynchronously guides an action model through cognition tokens and token age.",
+    "caveat_en": "A jointly trained interface is not a plug-and-play frozen VLA; distinguish refresh, inference, and playback frequencies."
+  },
+  {
+    "id": "2608.16590",
+    "name": "Zetta",
+    "title": "Zetta $ζ$: An Efficient Closed-Loop Embodied Harness for Self-Evolving Physical Intelligence",
+    "published": "2026-08-17",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Xin Ding",
+      "Liang Mi",
+      "Mingzhe Huang",
+      "Zixuan Wang",
+      "Chao Zhang",
+      "Zixu Hao",
+      "Fu Chen",
+      "Xiangyu Li",
+      "Yikai Zheng",
+      "Yaoyu Guo",
+      "Weijun Wang",
+      "Kun Li",
+      "Hao Wu",
+      "Yunxin Liu",
+      "Ting Cao"
+    ],
+    "tags": [
+      "verification",
+      "reflection",
+      "skills"
+    ],
+    "interface": "runtime critic + recovery",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2608.16590",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2608.16590"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Evolves code critics and recovery skills around a frozen base policy, separating the timescales of actions, rollouts, and update validation.",
+    "caveat_en": "High scores depend on the rollout budget used in the paper; action-rate governance does not imply large-model inference at the action rate."
+  },
+  {
+    "id": "2608.11350",
+    "name": "SHAPER",
+    "title": "Self-Evolving Embodied Agents via Skill-Harness Evolution",
+    "published": "2026-08-11",
+    "revised": "2026-09-10",
+    "version": 2,
+    "authors": [
+      "Peidong Wang",
+      "Zhiming Ma",
+      "Ying Chang",
+      "Xufang Luo",
+      "Yiqun Zhang",
+      "Zihan Wang",
+      "Xiaocui Yang",
+      "Shi Feng",
+      "Yuqing Yang",
+      "Dongsheng Li"
+    ],
+    "tags": [
+      "skills",
+      "reflection"
+    ],
+    "interface": "skill + harness",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2608.11350",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2608.11350"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Keeps parameters frozen and uses environment rollouts to jointly optimize reusable skills and a context-code harness.",
+    "caveat_en": "Check that target-environment adaptation data is separated from generalization tests."
+  },
+  {
+    "id": "2607.16636",
+    "name": "PhyAgentOS",
+    "title": "PhyAgentOS: A Self-Evolving Operating System for Embodied Agents with Decoupled Cognitive Planning and Physical Execution",
+    "published": "2026-07-18",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Yang Liu",
+      "Weixing Chen",
+      "Xinshuai Song",
+      "Tao Pu",
+      "Siwen Mo",
+      "Yongjie Bai",
+      "Zihao Chen",
+      "Qianran Sun",
+      "Liruo Zhong",
+      "Ying Shen",
+      "Liang Lin"
+    ],
+    "tags": [
+      "execution",
+      "verification",
+      "memory"
+    ],
+    "interface": "session runtime",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2607.16636",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2607.16636"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Uses sessions to organize scheduling, evidence, acceptance checks, and memory, decoupling cognition from physical execution through inspectable state records.",
+    "caveat_en": "Execution termination and semantic task success must be verified separately."
+  },
+  {
+    "id": "2607.14047",
+    "name": "Zero2Skill",
+    "title": "Zero2Skill: Bootstrapping Robot Skills through Autonomous Data Collection, Training, and Deployment",
+    "published": "2026-07-15",
+    "revised": "2026-07-22",
+    "version": 3,
+    "authors": [
+      "Boyuan Wang",
+      "Zhenyuan Zhang",
+      "Zhiqin Yang",
+      "Peijun Gu",
+      "Shuya Wang",
+      "Xiaofeng Wang",
+      "Xianghui Ze",
+      "Yifan Chang",
+      "Guosheng Zhao",
+      "Jiangnan Shao",
+      "Guan Huang",
+      "Hengyu Liu",
+      "Yonggang Zhang",
+      "Wei Xue",
+      "Chunyuan Guan",
+      "Chenglin Pu",
+      "Yike Guo",
+      "Xingang Wang",
+      "Zheng Zhu"
+    ],
+    "tags": [
+      "memory",
+      "policy-learning",
+      "reflection"
+    ],
+    "interface": "corrective memory + autonomous collection",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2607.14047",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2607.14047v3"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Collects data, verifies outcomes, and resets autonomously; requests human help only after exhausting a retry budget, then parses language corrections into Corrective Memory for reuse across rounds.",
+    "caveat_en": "Reduced human effort does not necessarily mean reduced elapsed time; distinguish collection success, verification accuracy, and trained-policy performance."
+  },
+  {
+    "id": "2607.08448",
+    "name": "Harness VLA",
+    "title": "Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents",
+    "published": "2026-07-09",
+    "revised": "2026-09-02",
+    "version": 4,
+    "authors": [
+      "Yixian Zhang",
+      "Huanming Zhang",
+      "Feng Gao",
+      "Xiao Li",
+      "Zhihao Liu",
+      "Chunyang Zhu",
+      "Jiaxing Qiu",
+      "Yuchen Yan",
+      "Jiyuan Liu",
+      "Wenhao Tang",
+      "Zhengru Fang",
+      "Yi Nie",
+      "Changxu Wei",
+      "Yu Wang",
+      "Wenbo Ding",
+      "Chao Yu"
+    ],
+    "tags": [
+      "execution",
+      "memory",
+      "reflection"
+    ],
+    "interface": "analytic primitives + frozen VLA",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2607.08448",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2607.08448"
+    ],
+    "metrics": [],
+    "code_url": "https://github.com/RLinf/RPent",
+    "project_url": null,
+    "summary_en": "Uses a frozen VLA as a retryable contact primitive, combining analytical tools with task and global memory to extend manipulation capabilities.",
+    "caveat_en": "This does not imply that the entire robot system requires no training; results must specify the backbone and rollout budget."
+  },
+  {
+    "id": "2607.00272",
+    "name": "ASPIRE",
+    "title": "ASPIRE: Agentic /Skills Discovery for Robotics",
+    "published": "2026-06-30",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Runyu Lu",
+      "Yubo Wu",
+      "Ethan Kou",
+      "Letian Fu",
+      "Wenli Xiao",
+      "Ajay Mandlekar",
+      "Yinzhen Xu",
+      "Guanya Shi",
+      "Ken Goldberg",
+      "Ang Chen",
+      "Mosharaf Chowdhury",
+      "Yuke Zhu",
+      "Linxi \"Jim\" Fan",
+      "Guanzhi Wang"
+    ],
+    "tags": [
+      "execution",
+      "reflection",
+      "skills"
+    ],
+    "interface": "code + skill library",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2607.00272",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2607.00272"
+    ],
+    "metrics": [],
+    "code_url": "https://github.com/NVlabs/ASPIRE",
+    "project_url": "https://research.nvidia.com/labs/gear/aspire/",
+    "summary_en": "Diagnoses failures using fine-grained multimodal execution records, searches for repair programs, and accumulates validated experience as skills.",
+    "caveat_en": "Verify transfer across tasks and embodiments; distinguish one-off repairs from sustained benefits."
+  },
+  {
+    "id": "2606.09416",
+    "name": "Harness Engineering for Physical AI",
+    "title": "Harness Engineering for Physical AI: Robot Middleware Is the Harness Layer",
+    "published": "2026-06-08",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Sanghoon Lee",
+      "Jiyeong Chae",
+      "Kyung-Joon Park"
+    ],
+    "tags": [
+      "execution",
+      "safety"
+    ],
+    "interface": "middleware proposal",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2606.09416",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2606.09416"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Proposes output constraints, resource isolation, and fallback mechanisms across control, computation, and communication paths.",
+    "caveat_en": "This is a position paper and protocol proposal, not a validated deployment standard."
+  },
+  {
+    "id": "2606.08610",
+    "name": "HARBOR",
+    "title": "HARBOR: A Harness Framework for Agentic Robot Reinforcement Learning",
+    "published": "2026-06-07",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Zechu Li",
+      "Yufeng Jin",
+      "Xiaoyang Liu",
+      "Puze Liu",
+      "Vignesh Prasad",
+      "Carlo D'Eramo",
+      "Georgia Chalvatzaki"
+    ],
+    "tags": [
+      "policy-learning",
+      "skills"
+    ],
+    "interface": "RL workflow",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2606.08610",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2606.08610"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Breaks simulation RL engineering into executable stages and automates training pipelines through persistent artifacts, checkpoints, and experience reuse.",
+    "caveat_en": "Improving a training pipeline is not online control; distinguish engineering cost from policy performance."
+  },
+  {
+    "id": "2605.18729",
+    "name": "Robo-Cortex",
+    "title": "Robo-Cortex: A Self-Evolving Embodied Agent via Dual-Grain Cognitive Memory and Autonomous Knowledge Induction",
+    "published": "2026-05-18",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Nga Teng Chan",
+      "Yi Zhang",
+      "Yechi Liu",
+      "Renwen Cui",
+      "Fanhu Zeng",
+      "Zeyuan Ding",
+      "Xiancong Ren",
+      "Zhang Zhang",
+      "Qifeng Chen",
+      "Jian Liu",
+      "Yong Dai",
+      "Xiaozhu Ju"
+    ],
+    "tags": [
+      "memory",
+      "reflection",
+      "verification"
+    ],
+    "interface": "dual-grain memory + heuristic induction",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2605.18729",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2605.18729",
+      "https://arxiv.org/html/2605.18729v1"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Distills navigation trajectories into reusable heuristics, combining short-term reflection, long-term principle memory, and Imagine-then-Verify planning.",
+    "caveat_en": "The primary evidence concerns navigation and embodied question answering; it does not directly establish benefits for contact manipulation."
+  },
+  {
+    "id": "2605.00416",
+    "name": "Learning While Deploying",
+    "title": "Learning While Deploying: Fleet-Scale Reinforcement Learning for Generalist Robot Policies",
+    "published": "2026-05-01",
+    "revised": "2026-09-16",
+    "version": 4,
+    "authors": [
+      "Yi Wang",
+      "Xinchen Li",
+      "Pengwei Xie",
+      "Pu Yang",
+      "Buqing Nie",
+      "Yunuo Cai",
+      "Qinglin Zhang",
+      "Chendi Qu",
+      "Jeffrey Wu",
+      "Jianheng Song",
+      "Xinlin Ren",
+      "Jingshun Huang",
+      "Mingjie Pan",
+      "Siyuan Feng",
+      "Zhi Chen",
+      "Jianlan Luo"
+    ],
+    "tags": [
+      "fleet",
+      "policy-learning"
+    ],
+    "interface": "fleet offline-to-online RL",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2605.00416",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2605.00416"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Pools deployment experience from multiple robots, continually updates a generalist VLA using DIVL and QAM, and redeploys it.",
+    "caveat_en": "The paper studies 16 robots and 8 tasks; this does not establish effectiveness at larger scales or in heterogeneous fleets."
+  },
+  {
+    "id": "2603.22435",
+    "name": "CaP-X",
+    "title": "CaP-X: A Framework for Benchmarking and Improving Coding Agents for Robot Manipulation",
+    "published": "2026-03-23",
+    "revised": "2026-07-02",
+    "version": 2,
+    "authors": [
+      "Letian Fu",
+      "Justin Yu",
+      "Karim El-Refai",
+      "Ethan Kou",
+      "Haoru Xue",
+      "Huang Huang",
+      "Wenli Xiao",
+      "Guanzhi Wang",
+      "Dantong Niu",
+      "Fei-Fei Li",
+      "Guanya Shi",
+      "Jiajun Wu",
+      "Shankar Sastry",
+      "Yuke Zhu",
+      "Ken Goldberg",
+      "Linxi \"Jim\" Fan"
+    ],
+    "tags": [
+      "execution",
+      "evaluation",
+      "policy-learning"
+    ],
+    "interface": "code + RL",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2603.22435",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2603.22435"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Provides environments and evaluation for robot coding agents, studying tool abstractions, test-time compute, and RL with verifiable rewards.",
+    "caveat_en": "Human-designed tool priors, perception access, and interaction budgets determine whether comparisons are fair."
+  },
+  {
+    "id": "2603.11558",
+    "name": "RoboClaw",
+    "title": "RoboClaw: An Agentic Framework for Scalable Long-Horizon Robotic Tasks",
+    "published": "2026-03-12",
+    "revised": "2026-04-01",
+    "version": 3,
+    "authors": [
+      "Ruiying Li",
+      "Yunlang Zhou",
+      "YuYao Zhu",
+      "Kylin Chen",
+      "Jingyuan Wang",
+      "Sukai Wang",
+      "Kongtao Hu",
+      "Minhui Yu",
+      "Bowen Jiang",
+      "Zhan Su",
+      "Jiayao Ma",
+      "Xin He",
+      "Yongjian Shen",
+      "Yang Yang",
+      "Guanghui Ren",
+      "Maoqing Yao",
+      "Wenhao Wang",
+      "Yao Mu"
+    ],
+    "tags": [
+      "policy-learning",
+      "execution"
+    ],
+    "interface": "self-reset + policy primitives",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2603.11558",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2603.11558"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Combines forward manipulation and reverse recovery into a self-resetting loop, using a unified VLM controller to organize collection, learning, and deployment.",
+    "caveat_en": "Task success and autonomous reset success are separate metrics."
+  },
+  {
+    "id": "2603.04639",
+    "name": "RoboMME",
+    "title": "RoboMME: Benchmarking and Understanding Memory for Robotic Generalist Policies",
+    "published": "2026-03-04",
+    "revised": "2026-05-26",
+    "version": 3,
+    "authors": [
+      "Yinpei Dai",
+      "Hongze Fu",
+      "Jayjun Lee",
+      "Yuejiang Liu",
+      "Haoran Zhang",
+      "Jianing Yang",
+      "Chelsea Finn",
+      "Nima Fazeli",
+      "Joyce Chai"
+    ],
+    "tags": [
+      "memory",
+      "evaluation"
+    ],
+    "interface": "history representation",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2603.04639",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2603.04639"
+    ],
+    "metrics": [],
+    "code_url": "https://github.com/RoboMME/robomme_benchmark",
+    "project_url": "https://robomme.github.io/",
+    "summary_en": "Evaluates temporal, spatial, object, and procedural memory in robotics, comparing 14 memory-augmented configurations.",
+    "caveat_en": "Aggregate averages are insufficient across different memory tasks; report per-task performance and oracle conditions."
+  },
+  {
+    "id": "2602.09023",
+    "name": "TwinRL",
+    "title": "TwinRL: Digital Twin-Driven Reinforcement Learning for Real-World Robotic Manipulation",
+    "published": "2026-02-09",
+    "revised": "2026-05-19",
+    "version": 4,
+    "authors": [
+      "Qinwen Xu",
+      "Jiaming Liu",
+      "Rui Zhou",
+      "Shaojun Shi",
+      "Nuowei Han",
+      "Zhuoyang Liu",
+      "Chenyang Gu",
+      "Shuo Gu",
+      "Yang Yue",
+      "Gao Huang",
+      "Wenzhao Zheng",
+      "Sirui Han",
+      "Peng Jia",
+      "Shanghang Zhang"
+    ],
+    "tags": [
+      "simulation",
+      "policy-learning"
+    ],
+    "interface": "digital twin RL",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2602.09023",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2602.09023"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Reduces online learning cost through SFT support-set expansion, digital-twin RL warm-up, and targeted real-world exploration.",
+    "caveat_en": "Include digital-twin construction in total cost instead of comparing only minutes of real-world interaction."
+  },
+  {
+    "id": "2602.01662",
+    "name": "PLanAR",
+    "title": "PLanAR: Planning-Language-Grounded Agentic Reasoning for Robot Manipulation",
+    "published": "2026-02-02",
+    "revised": "2026-05-31",
+    "version": 4,
+    "authors": [
+      "Pengyuan Guo",
+      "Zhonghao Mai",
+      "Zhengtong Xu",
+      "Kaidi Zhang",
+      "Quan Khanh Luu",
+      "Heng Zhang",
+      "Zichen Miao",
+      "Arash Ajoudani",
+      "Zachary Kingston",
+      "Qiang Qiu",
+      "Yu She"
+    ],
+    "tags": [
+      "execution",
+      "verification",
+      "evaluation"
+    ],
+    "interface": "symbolic planning",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2602.01662",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2602.01662"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Constrains reasoning with object predicates, action preconditions and postconditions, and symbolic plans, checking execution effects step by step and replanning.",
+    "caveat_en": "Earlier drafts were titled AgenticLab; v4 changes the positioning, so it should no longer be described only as a benchmark."
+  },
+  {
+    "id": "2602.01100",
+    "name": "StreamVLA",
+    "title": "StreamVLA: Breaking the Reason-Act Cycle via Completion-State Gating",
+    "published": "2026-02-01",
+    "revised": "2026-02-07",
+    "version": 2,
+    "authors": [
+      "Tongqing Chen",
+      "Hang Wu",
+      "Jiasen Wang",
+      "Xiaotao Li",
+      "Lu Fang"
+    ],
+    "tags": [
+      "dual-system",
+      "verification"
+    ],
+    "interface": "completion-state gating",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2602.01100",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2602.01100"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Generates textual and visual completion states at subtask transitions, while locking intent and continuously producing actions during stable execution.",
+    "caveat_en": "Check whether both normal progress and execution failures reliably trigger replanning."
+  },
+  {
+    "id": "2601.05248",
+    "name": "LaST0",
+    "title": "LaST$_{0}$: Latent Spatio-Temporal Chain-of-Thought for Robotic Vision-Language-Action Model",
+    "published": "2026-01-08",
+    "revised": "2026-06-12",
+    "version": 4,
+    "authors": [
+      "Zhuoyang Liu",
+      "Jiaming Liu",
+      "Hao Chen",
+      "Jiale Yu",
+      "Ziyu Guo",
+      "Chengkai Hou",
+      "Chenyang Gu",
+      "Xiangju Mi",
+      "Renrui Zhang",
+      "Kun Wu",
+      "Zhengping Che",
+      "Jian Tang",
+      "Pheng-Ann Heng",
+      "Shanghang Zhang"
+    ],
+    "tags": [
+      "dual-system"
+    ],
+    "interface": "latent reasoning",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2601.05248",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2601.05248"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Connects a low-frequency reasoning expert to a high-frequency action expert through latent reasoning that incorporates visual dynamics, 3D structure, and proprioception.",
+    "caveat_en": "Compare latent-reasoning benefits against baselines with matched parameter counts and compute budgets."
+  },
+  {
+    "id": "2512.00076",
+    "name": "Arcadia",
+    "title": "Arcadia: Toward a Full-Lifecycle Framework for Embodied Lifelong Learning",
+    "published": "2025-11-25",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Minghe Gao",
+      "Juncheng Li",
+      "Yuze Lin",
+      "Xuqi Liu",
+      "Jiaming Ji",
+      "Xiaoran Pan",
+      "Zihan Xu",
+      "Xian Li",
+      "Mingjie Li",
+      "Wei Ji",
+      "Rong Wei",
+      "Rui Tang",
+      "Qizhou Wang",
+      "Kai Shen",
+      "Jun Xiao",
+      "Qi Wu",
+      "Siliang Tang",
+      "Yueting Zhuang"
+    ],
+    "tags": [
+      "simulation",
+      "policy-learning"
+    ],
+    "interface": "lifecycle framework",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2512.00076",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2512.00076"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Connects autonomous exploration, scene reconstruction, shared embodied representations, and simulation updates driven by real-world feedback.",
+    "caveat_en": "The lifecycle framework implementation and the causal contribution of each stage still require full-text verification."
+  },
+  {
+    "id": "2509.24219",
+    "name": "ViReSkill",
+    "title": "ViReSkill: Vision-Grounded Replanning with Skill Memory for LLM-Based Planning in Lifelong Robot Learning",
+    "published": "2025-09-29",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Tomoyuki Kagaya",
+      "Subramanian Lakshmi",
+      "Anbang Ye",
+      "Thong Jing Yuan",
+      "Jayashree Karlekar",
+      "Sugiri Pranata",
+      "Natsuki Murakami",
+      "Akira Kinose",
+      "Yang You"
+    ],
+    "tags": [
+      "reflection",
+      "skills"
+    ],
+    "interface": "skill memory",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2509.24219",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2509.24219"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Replans from visual observations after failures and stores successful plans in skill memory for later reuse.",
+    "caveat_en": "Evaluate gains from repeated-scene replay separately from cross-task transfer."
+  },
+  {
+    "id": "2506.01953",
+    "name": "Fast-in-Slow",
+    "title": "Fast-in-Slow: A Dual-System Foundation Model Unifying Fast Manipulation within Slow Reasoning",
+    "published": "2025-06-02",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Hao Chen",
+      "Jiaming Liu",
+      "Chenyang Gu",
+      "Zhuoyang Liu",
+      "Renrui Zhang",
+      "Xiaoqi Li",
+      "Xiao He",
+      "Yandong Guo",
+      "Chi-Wing Fu",
+      "Shanghang Zhang",
+      "Pheng-Ann Heng"
+    ],
+    "tags": [
+      "dual-system"
+    ],
+    "interface": "partially shared VLA",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2506.01953",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2506.01953"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Embeds a fast execution module within a slow reasoning system through partially shared parameters, asynchronous frequencies, and heterogeneous inputs.",
+    "caveat_en": "The reported 117.7 Hz uses chunk=8; it is not the number of independent VLM inferences per second."
+  },
+  {
+    "id": "2505.11917",
+    "name": "OneTwoVLA",
+    "title": "OneTwoVLA: A Unified Vision-Language-Action Model with Adaptive Reasoning",
+    "published": "2025-05-17",
+    "revised": "2026-03-01",
+    "version": 2,
+    "authors": [
+      "Fanqi Lin",
+      "Ruiqian Nai",
+      "Yingdong Hu",
+      "Jiacheng You",
+      "Junming Zhao",
+      "Yang Gao"
+    ],
+    "tags": [
+      "dual-system",
+      "execution"
+    ],
+    "interface": "adaptive reasoning VLA",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2505.11917",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2505.11917"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "A unified model switches between reasoning and action as needed, co-trained on robot data and synthetic reasoning data.",
+    "caveat_en": "Record switching triggers, end-to-end latency, and recovery from unexpected events."
+  },
+  {
+    "id": "2505.03673",
+    "name": "RoboOS",
+    "title": "RoboOS: A Hierarchical Embodied Framework for Cross-Embodiment and Multi-Agent Collaboration",
+    "published": "2025-05-06",
+    "revised": "2025-06-05",
+    "version": 2,
+    "authors": [
+      "Huajie Tan",
+      "Xiaoshuai Hao",
+      "Cheng Chi",
+      "Minglan Lin",
+      "Yaoxu Lyu",
+      "Mingyu Cao",
+      "Dong Liang",
+      "Zhuo Chen",
+      "Mengsi Lyu",
+      "Cheng Peng",
+      "Chenrui He",
+      "Yulong Ao",
+      "Yonghua Lin",
+      "Pengwei Wang",
+      "Zhongyuan Wang",
+      "Shanghang Zhang"
+    ],
+    "tags": [
+      "fleet",
+      "execution",
+      "memory"
+    ],
+    "interface": "brain + skill library",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2505.03673",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2505.03673"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Organizes tasks and error correction across embodiments using an embodied brain, a modular skill library, and real-time shared memory.",
+    "caveat_en": "State synchronization alone is not evidence that shared experience improves a policy."
+  },
+  {
+    "id": "2503.22122",
+    "name": "REMAC",
+    "title": "REMAC: Self-Reflective and Self-Evolving Multi-Agent Collaboration for Long-Horizon Robot Manipulation",
+    "published": "2025-03-28",
+    "revised": "2026-08-10",
+    "version": 2,
+    "authors": [
+      "Puzhen Yuan",
+      "Angyuan Ma",
+      "Yunchao Yao",
+      "Huaxiu Yao",
+      "Masayoshi Tomizuka",
+      "Mingyu Ding"
+    ],
+    "tags": [
+      "fleet",
+      "reflection",
+      "verification"
+    ],
+    "interface": "pre/postcondition checks",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2503.22122",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2503.22122"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Combines precondition and postcondition checks, self-reflection, and dynamic planning for long-horizon multi-robot tasks.",
+    "caveat_en": "Self-evolving plans do not imply updates to policy weights."
+  },
+  {
+    "id": "2411.17636",
+    "name": "MALMM",
+    "title": "MALMM: Multi-Agent Large Language Models for Zero-Shot Robotics Manipulation",
+    "published": "2024-11-26",
+    "revised": "2025-08-25",
+    "version": 2,
+    "authors": [
+      "Harsh Singh",
+      "Rocktim Jyoti Das",
+      "Mingfei Han",
+      "Preslav Nakov",
+      "Ivan Laptev"
+    ],
+    "tags": [
+      "execution",
+      "reflection"
+    ],
+    "interface": "multi-agent code",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2411.17636",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2411.17636"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Assigns task planning, control-code generation, and process supervision to separate agents, using stepwise feedback to handle failures.",
+    "caveat_en": "This is a division of labor among agents within one system; it does not automatically imply collaboration among multiple robots."
+  },
+  {
+    "id": "2307.04738",
+    "name": "RoCo",
+    "title": "RoCo: Dialectic Multi-Robot Collaboration with Large Language Models",
+    "published": "2023-07-10",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Zhao Mandi",
+      "Shreeya Jain",
+      "Shuran Song"
+    ],
+    "tags": [
+      "fleet",
+      "execution"
+    ],
+    "interface": "multi-robot dialogue",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2307.04738",
+    "verification": "primary_abstract",
+    "checked_on": "2026-09-22",
+    "sources": [
+      "https://arxiv.org/abs/2307.04738"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Multiple robots use dialogue to produce task decompositions and waypoints, then check feasibility using environment feedback and motion planning.",
+    "caveat_en": "Record multi-robot collaboration separately from shared learning across robots."
+  }
+]
