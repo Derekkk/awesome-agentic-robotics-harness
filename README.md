@@ -2,7 +2,7 @@
 
 > From closed-loop execution to continual learning: a research index of papers, system mechanisms, evaluation, and open questions.
 
-Latest manual review: **2026-09-22** · **36 indexed papers** · See the unverified list for pending entries.
+Latest manual review: **2026-10-04** · **37 indexed papers** · See the unverified list for pending entries.
 
 This review primarily checked original abstracts and author project pages, rather than reproducing every paper in full. Each card states its verification scope; research questions and categories reflect maintainer analysis.
 
@@ -30,13 +30,13 @@ Execution, Learning, and Fleet are overlapping organizational perspectives. Mult
 
 | Area | Core question | Entries |
 |---|---|---:|
-| [Closed-loop execution and tool interfaces](#execution) | What does the reasoning model output, how do tools connect to controllers, and when should the system observe and replan? | 15 |
+| [Closed-loop execution and tool interfaces](#execution) | What does the reasoning model output, how do tools connect to controllers, and when should the system observe and replan? | 16 |
 | [Long-term memory and context](#memory) | What history is stored, and how is it retrieved, compressed, and used to guide actions? | 10 |
 | [State verification and failure monitoring](#verification) | How can action completion, task success, and the need for recovery be distinguished? | 10 |
 | [Reflection, attribution, and recovery](#reflection) | How are failure causes identified and subsequent attempts changed? | 10 |
-| [Skill and harness evolution](#skills) | How can experience become transferable, verifiable skills without degrading existing capabilities? | 6 |
+| [Skill and harness evolution](#skills) | How can experience become transferable, verifiable skills without degrading existing capabilities? | 7 |
 | [Fast and slow systems and real-time execution](#dual-system) | At what frequencies do reasoning, action generation, playback, and feedback operate? | 6 |
-| [Policy learning and autonomous data loops](#policy-learning) | How does environment feedback enter training, reset, and redeployment? | 8 |
+| [Policy learning and autonomous data loops](#policy-learning) | How does environment feedback enter training, reset, and redeployment? | 9 |
 | [Digital twins and simulation validation](#simulation) | How can physical exploration costs be reduced and transfer be tested? | 2 |
 | [Multi-robot collaboration and collective learning](#fleet) | What evidence supports shared state, shared skills, and shared weights, respectively? | 4 |
 | [Runtime constraints and safety](#safety) | How are task constraints enforced during routing, contact, resource use, and fallback? | 4 |
@@ -58,6 +58,7 @@ What does the reasoning model output, how do tools connect to controllers, and w
 
 | Submitted | Work | Core mechanism |
 |---|---|---|
+| 2026-09-28 | [APPL](papers/2609.35690.md) · [Paper](https://arxiv.org/abs/2609.35690) | A construction agent segments demonstrations into skills, trains and verifies one policy per proposed structural prior, and records each prior's applicability in an interface that a runtime agent reads to select and compose policies. |
 | 2026-09-17 | [SafeHarness](papers/2609.20822.md) · [Paper](https://arxiv.org/abs/2609.20822) | Turns obstacle-avoidance requirements into action choices during routing and contact, combining waypoint validation with replanning. |
 | 2026-09-16 | [GPT-Policy](papers/2609.19138.md) · [Paper](https://arxiv.org/abs/2609.19138) | A context compiler retains task-relevant visual transitions; a VLM proposes robot tool actions that a constrained controller checks and executes. |
 | 2026-09-10 | [Harness Robotic OS](papers/2609.11225.md) · [Paper](https://arxiv.org/abs/2609.11225) | Organizes quadruped inspection skills, shared context, hierarchical memory, and controlled candidate updates into a unified runtime. |
@@ -135,6 +136,7 @@ How can experience become transferable, verifiable skills without degrading exis
 
 | Submitted | Work | Core mechanism |
 |---|---|---|
+| 2026-09-28 | [APPL](papers/2609.35690.md) · [Paper](https://arxiv.org/abs/2609.35690) | A construction agent segments demonstrations into skills, trains and verifies one policy per proposed structural prior, and records each prior's applicability in an interface that a runtime agent reads to select and compose policies. |
 | 2026-09-01 | [HarnessEvolve](papers/2609.00829.md) · [Paper](https://arxiv.org/abs/2609.00829) | Uses reference trajectories for failure attribution and screens harness updates through quality and performance gates to reduce regressions. |
 | 2026-08-17 | [Zetta](papers/2608.16590.md) · [Paper](https://arxiv.org/abs/2608.16590) | Evolves code critics and recovery skills around a frozen base policy, separating the timescales of actions, rollouts, and update validation. |
 | 2026-08-11 | [SHAPER](papers/2608.11350.md) · [Paper](https://arxiv.org/abs/2608.11350) | Keeps parameters frozen and uses environment rollouts to jointly optimize reusable skills and a context-code harness. |
@@ -163,6 +165,7 @@ How does environment feedback enter training, reset, and redeployment?
 
 | Submitted | Work | Core mechanism |
 |---|---|---|
+| 2026-09-28 | [APPL](papers/2609.35690.md) · [Paper](https://arxiv.org/abs/2609.35690) | A construction agent segments demonstrations into skills, trains and verifies one policy per proposed structural prior, and records each prior's applicability in an interface that a runtime agent reads to select and compose policies. |
 | 2026-09-16 | [HALTER](papers/2609.19413.md) · [Paper](https://arxiv.org/abs/2609.19413) | Builds scene graphs and composes atomic reset skills for automatic scoring, reset planning, and reset verification in long-horizon evaluation. |
 | 2026-07-15 | [Zero2Skill](papers/2607.14047.md) · [Paper](https://arxiv.org/abs/2607.14047) | Collects data, verifies outcomes, and resets autonomously; requests human help only after exhausting a retry budget, then parses language corrections into Corrective Memory for reuse across rounds. |
 | 2026-06-07 | [HARBOR](papers/2606.08610.md) · [Paper](https://arxiv.org/abs/2606.08610) | Breaks simulation RL engineering into executable stages and automates training pipelines through persistent artifacts, checkpoints, and experience reuse. |

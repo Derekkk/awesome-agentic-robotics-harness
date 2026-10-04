@@ -20,3 +20,7 @@
 - Translated the index, all 36 paper cards, research documents, contribution guide, and review reports into English.
 - Migrated curated summary and limitation fields to `summary_en` and `caveat_en`.
 - Updated rendering and discovery templates so regenerated content remains in English.
+
+## 2026-10-04 — APPL addition
+
+- Added APPL (Agent Priors-guided Policy Learning, arXiv 2609.35690) under execution, skills, and policy learning, bringing the curated index to 37 papers. See the [review note](reports/2026-10-04.md).

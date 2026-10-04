@@ -1,5 +1,41 @@
 [
   {
+    "id": "2609.35690",
+    "name": "APPL",
+    "title": "Agent Priors-guided Policy Learning",
+    "published": "2026-09-28",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Puming Jiang",
+      "Tianrun Hu",
+      "Haozhe Du",
+      "Yibo Li",
+      "Zhiwei Xue",
+      "Xinhu Li",
+      "Harold Soh"
+    ],
+    "tags": [
+      "execution",
+      "skills",
+      "policy-learning"
+    ],
+    "interface": "prior-specific policy library + interfaces",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2609.35690",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-04",
+    "sources": [
+      "https://arxiv.org/abs/2609.35690",
+      "https://agentics-robotics.github.io/APPL/"
+    ],
+    "metrics": [],
+    "code_url": "https://github.com/Agentics-robotics/Agent-Priors-guided-Policy-Learning",
+    "project_url": "https://agentics-robotics.github.io/APPL/",
+    "summary_en": "A construction agent segments demonstrations into skills, trains and verifies one policy per proposed structural prior, and records each prior's applicability in an interface that a runtime agent reads to select and compose policies.",
+    "caveat_en": "Simulation only (MetaWorld and ManiSkill); construction-time verification covers demonstrated skill-entry states and is not an out-of-distribution guarantee."
+  },
+  {
     "id": "2609.20822",
     "name": "SafeHarness",
     "title": "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
