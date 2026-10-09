@@ -18,6 +18,7 @@ def render():
     '## Navigation', '',
     '- [Research agenda and testable hypotheses](docs/research-agenda.md)',
     '- [Architecture comparison](docs/architecture-comparison.md)',
+    '- [Latest review: 2026-10-09](reports/2026-10-09.md)',
     '- [Initial review and corrections](reports/2026-09-22.md)',
     '- [Evaluation protocol](docs/evaluation-protocol.md) · [Evidence policy](docs/evidence-policy.md)',
     '- [Daily candidates](docs/inbox.md) · [Unverified leads](docs/unverified.md)',

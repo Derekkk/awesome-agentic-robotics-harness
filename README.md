@@ -2,7 +2,7 @@
 
 > From closed-loop execution to continual learning: a research index of papers, system mechanisms, evaluation, and open questions.
 
-Latest manual review: **2026-09-22** · **36 indexed papers** · See the unverified list for pending entries.
+Latest manual review: **2026-10-09** · **45 indexed papers** · See the unverified list for pending entries.
 
 This review primarily checked original abstracts and author project pages, rather than reproducing every paper in full. Each card states its verification scope; research questions and categories reflect maintainer analysis.
 
@@ -10,6 +10,7 @@ This review primarily checked original abstracts and author project pages, rathe
 
 - [Research agenda and testable hypotheses](docs/research-agenda.md)
 - [Architecture comparison](docs/architecture-comparison.md)
+- [Latest review: 2026-10-09](reports/2026-10-09.md)
 - [Initial review and corrections](reports/2026-09-22.md)
 - [Evaluation protocol](docs/evaluation-protocol.md) · [Evidence policy](docs/evidence-policy.md)
 - [Daily candidates](docs/inbox.md) · [Unverified leads](docs/unverified.md)
@@ -30,18 +31,18 @@ Execution, Learning, and Fleet are overlapping organizational perspectives. Mult
 
 | Area | Core question | Entries |
 |---|---|---:|
-| [Closed-loop execution and tool interfaces](#execution) | What does the reasoning model output, how do tools connect to controllers, and when should the system observe and replan? | 15 |
-| [Long-term memory and context](#memory) | What history is stored, and how is it retrieved, compressed, and used to guide actions? | 10 |
-| [State verification and failure monitoring](#verification) | How can action completion, task success, and the need for recovery be distinguished? | 10 |
-| [Reflection, attribution, and recovery](#reflection) | How are failure causes identified and subsequent attempts changed? | 10 |
-| [Skill and harness evolution](#skills) | How can experience become transferable, verifiable skills without degrading existing capabilities? | 6 |
+| [Closed-loop execution and tool interfaces](#execution) | What does the reasoning model output, how do tools connect to controllers, and when should the system observe and replan? | 20 |
+| [Long-term memory and context](#memory) | What history is stored, and how is it retrieved, compressed, and used to guide actions? | 13 |
+| [State verification and failure monitoring](#verification) | How can action completion, task success, and the need for recovery be distinguished? | 13 |
+| [Reflection, attribution, and recovery](#reflection) | How are failure causes identified and subsequent attempts changed? | 12 |
+| [Skill and harness evolution](#skills) | How can experience become transferable, verifiable skills without degrading existing capabilities? | 9 |
 | [Fast and slow systems and real-time execution](#dual-system) | At what frequencies do reasoning, action generation, playback, and feedback operate? | 6 |
-| [Policy learning and autonomous data loops](#policy-learning) | How does environment feedback enter training, reset, and redeployment? | 8 |
+| [Policy learning and autonomous data loops](#policy-learning) | How does environment feedback enter training, reset, and redeployment? | 10 |
 | [Digital twins and simulation validation](#simulation) | How can physical exploration costs be reduced and transfer be tested? | 2 |
 | [Multi-robot collaboration and collective learning](#fleet) | What evidence supports shared state, shared skills, and shared weights, respectively? | 4 |
 | [Runtime constraints and safety](#safety) | How are task constraints enforced during routing, contact, resource use, and fallback? | 4 |
-| [Evaluation and reproducibility](#evaluation) | Are interfaces, perception access, budgets, perturbations, and data splits matched? | 7 |
-| [Methods from general-purpose agents](#transfer) | Which software-agent mechanisms are worth transferring to physical execution? | 3 |
+| [Evaluation and reproducibility](#evaluation) | Are interfaces, perception access, budgets, perturbations, and data splits matched? | 10 |
+| [Methods from general-purpose agents](#transfer) | Which software-agent mechanisms are worth transferring to physical execution? | 4 |
 
 ## Suggested reading
 
@@ -58,14 +59,19 @@ What does the reasoning model output, how do tools connect to controllers, and w
 
 | Submitted | Work | Core mechanism |
 |---|---|---|
+| 2026-09-24 | [Robo-Harness K1](papers/2609.29389.md) · [Paper](https://arxiv.org/abs/2609.29389) | Exposes depth, persistent visual anchors, geometry measurements, and grasp proposals as tools; collected tool-call traces also support training smaller robot-use agents. |
+| 2026-09-23 | [RegenHarness](papers/2609.27612.md) · [Paper](https://arxiv.org/abs/2609.27612) | Separates proposed actions from accepted task progress through evidence checks, versioned state, bounded recovery, and regression-gated changes to the harness configuration. |
 | 2026-09-17 | [SafeHarness](papers/2609.20822.md) · [Paper](https://arxiv.org/abs/2609.20822) | Turns obstacle-avoidance requirements into action choices during routing and contact, combining waypoint validation with replanning. |
 | 2026-09-16 | [GPT-Policy](papers/2609.19138.md) · [Paper](https://arxiv.org/abs/2609.19138) | A context compiler retains task-relevant visual transitions; a VLM proposes robot tool actions that a constrained controller checks and executes. |
+| 2026-09-14 | [HarnessVLN](papers/2609.15195.md) · [Paper](https://arxiv.org/abs/2609.15195) | Checks navigation proposals against evidence and geometry, using event memory and a persistent spatial graph to guide execution, recovery, and termination. |
 | 2026-09-10 | [Harness Robotic OS](papers/2609.11225.md) · [Paper](https://arxiv.org/abs/2609.11225) | Organizes quadruped inspection skills, shared context, hierarchical memory, and controlled candidate updates into a unified runtime. |
 | 2026-09-09 | [Show-Harness](papers/2609.10522.md) · [Paper](https://arxiv.org/abs/2609.10522) | A VLM emits discrete semantic action units that an embodiment-specific interpreter deterministically converts into local actions, with GUI support for collecting demonstrations. |
+| 2026-07-20 | [RoboHarness (policy orchestration)](papers/2607.18060.md) · [Paper](https://arxiv.org/abs/2607.18060) | Packages heterogeneous robot policies as skills, uses memory to route tasks by capability, and bridges handoff states without jointly retraining the policies. |
 | 2026-07-18 | [PhyAgentOS](papers/2607.16636.md) · [Paper](https://arxiv.org/abs/2607.16636) | Uses sessions to organize scheduling, evidence, acceptance checks, and memory, decoupling cognition from physical execution through inspectable state records. |
 | 2026-07-09 | [Harness VLA](papers/2607.08448.md) · [Paper](https://arxiv.org/abs/2607.08448) | Uses a frozen VLA as a retryable contact primitive, combining analytical tools with task and global memory to extend manipulation capabilities. |
 | 2026-06-30 | [ASPIRE](papers/2607.00272.md) · [Paper](https://arxiv.org/abs/2607.00272) | Diagnoses failures using fine-grained multimodal execution records, searches for repair programs, and accumulates validated experience as skills. |
 | 2026-06-08 | [Harness Engineering for Physical AI](papers/2606.09416.md) · [Paper](https://arxiv.org/abs/2606.09416) | Proposes output constraints, resource isolation, and fallback mechanisms across control, computation, and communication paths. |
+| 2026-03-25 | [RoboHarness (VLA adaptation)](papers/2603.24060.md) · [Paper](https://arxiv.org/abs/2603.24060) | Combines contrasting execution memories, failure attribution, and tool-based interventions around frozen VLAs, consolidating traces offline for future in-context adaptation. |
 | 2026-03-23 | [CaP-X](papers/2603.22435.md) · [Paper](https://arxiv.org/abs/2603.22435) | Provides environments and evaluation for robot coding agents, studying tool abstractions, test-time compute, and RL with verifiable rewards. |
 | 2026-03-12 | [RoboClaw](papers/2603.11558.md) · [Paper](https://arxiv.org/abs/2603.11558) | Combines forward manipulation and reverse recovery into a self-resetting loop, using a unified VLM controller to organize collection, learning, and deployment. |
 | 2026-02-02 | [PLanAR](papers/2602.01662.md) · [Paper](https://arxiv.org/abs/2602.01662) | Constrains reasoning with object predicates, action preconditions and postconditions, and symbolic plans, checking execution effects step by step and replanning. |
@@ -82,13 +88,16 @@ What history is stored, and how is it retrieved, compressed, and used to guide a
 | Submitted | Work | Core mechanism |
 |---|---|---|
 | 2026-09-16 | [GPT-Policy](papers/2609.19138.md) · [Paper](https://arxiv.org/abs/2609.19138) | A context compiler retains task-relevant visual transitions; a VLM proposes robot tool actions that a constrained controller checks and executes. |
+| 2026-09-14 | [HarnessVLN](papers/2609.15195.md) · [Paper](https://arxiv.org/abs/2609.15195) | Checks navigation proposals against evidence and geometry, using event memory and a persistent spatial graph to guide execution, recovery, and termination. |
 | 2026-09-10 | [MaP-WAM](papers/2609.11561.md) · [Paper](https://arxiv.org/abs/2609.11561) | Uses long histories for planning, compresses them into segment-level language and visual guidance, and predicts action chunks and execution progress with an action model. |
 | 2026-09-10 | [Harness Robotic OS](papers/2609.11225.md) · [Paper](https://arxiv.org/abs/2609.11225) | Organizes quadruped inspection skills, shared context, hierarchical memory, and controlled candidate updates into a unified runtime. |
 | 2026-08-25 | [PonderPounce](papers/2608.24115.md) · [Paper](https://arxiv.org/abs/2608.24115) | Maintains an episode in the native MLLM context and asynchronously guides an action model through cognition tokens and token age. |
+| 2026-07-20 | [RoboHarness (policy orchestration)](papers/2607.18060.md) · [Paper](https://arxiv.org/abs/2607.18060) | Packages heterogeneous robot policies as skills, uses memory to route tasks by capability, and bridges handoff states without jointly retraining the policies. |
 | 2026-07-18 | [PhyAgentOS](papers/2607.16636.md) · [Paper](https://arxiv.org/abs/2607.16636) | Uses sessions to organize scheduling, evidence, acceptance checks, and memory, decoupling cognition from physical execution through inspectable state records. |
 | 2026-07-15 | [Zero2Skill](papers/2607.14047.md) · [Paper](https://arxiv.org/abs/2607.14047) | Collects data, verifies outcomes, and resets autonomously; requests human help only after exhausting a retry budget, then parses language corrections into Corrective Memory for reuse across rounds. |
 | 2026-07-09 | [Harness VLA](papers/2607.08448.md) · [Paper](https://arxiv.org/abs/2607.08448) | Uses a frozen VLA as a retryable contact primitive, combining analytical tools with task and global memory to extend manipulation capabilities. |
 | 2026-05-18 | [Robo-Cortex](papers/2605.18729.md) · [Paper](https://arxiv.org/abs/2605.18729) | Distills navigation trajectories into reusable heuristics, combining short-term reflection, long-term principle memory, and Imagine-then-Verify planning. |
+| 2026-03-25 | [RoboHarness (VLA adaptation)](papers/2603.24060.md) · [Paper](https://arxiv.org/abs/2603.24060) | Combines contrasting execution memories, failure attribution, and tool-based interventions around frozen VLAs, consolidating traces offline for future in-context adaptation. |
 | 2026-03-04 | [RoboMME](papers/2603.04639.md) · [Paper](https://arxiv.org/abs/2603.04639) | Evaluates temporal, spatial, object, and procedural memory in robotics, comparing 14 memory-augmented configurations. |
 | 2025-05-06 | [RoboOS](papers/2505.03673.md) · [Paper](https://arxiv.org/abs/2505.03673) | Organizes tasks and error correction across embodiments using an embodied brain, a modular skill library, and real-time shared memory. |
 
@@ -99,8 +108,11 @@ How can action completion, task success, and the need for recovery be distinguis
 
 | Submitted | Work | Core mechanism |
 |---|---|---|
+| 2026-10-06 | [VeriFine](papers/2610.08761.md) · [Paper](https://arxiv.org/abs/2610.08761) | Alternates policy optimization with human-guided judge calibration, using diagnosed failures to revise the training curriculum and verification feedback. |
+| 2026-09-23 | [RegenHarness](papers/2609.27612.md) · [Paper](https://arxiv.org/abs/2609.27612) | Separates proposed actions from accepted task progress through evidence checks, versioned state, bounded recovery, and regression-gated changes to the harness configuration. |
 | 2026-09-17 | [SafeHarness](papers/2609.20822.md) · [Paper](https://arxiv.org/abs/2609.20822) | Turns obstacle-avoidance requirements into action choices during routing and contact, combining waypoint validation with replanning. |
 | 2026-09-16 | [HALTER](papers/2609.19413.md) · [Paper](https://arxiv.org/abs/2609.19413) | Builds scene graphs and composes atomic reset skills for automatic scoring, reset planning, and reset verification in long-horizon evaluation. |
+| 2026-09-14 | [HarnessVLN](papers/2609.15195.md) · [Paper](https://arxiv.org/abs/2609.15195) | Checks navigation proposals against evidence and geometry, using event memory and a persistent spatial graph to guide execution, recovery, and termination. |
 | 2026-09-10 | [MaP-WAM](papers/2609.11561.md) · [Paper](https://arxiv.org/abs/2609.11561) | Uses long histories for planning, compresses them into segment-level language and visual guidance, and predicts action chunks and execution progress with an action model. |
 | 2026-09-10 | [FARM](papers/2609.11445.md) · [Paper](https://arxiv.org/abs/2609.11445) | Freezes the VLA-JEPA predictive backbone and trains only a lightweight readout, producing failure scores from internal states and aggregating risk over observed history. |
 | 2026-08-17 | [Zetta](papers/2608.16590.md) · [Paper](https://arxiv.org/abs/2608.16590) | Evolves code critics and recovery skills around a frozen base policy, separating the timescales of actions, rollouts, and update validation. |
@@ -117,6 +129,7 @@ How are failure causes identified and subsequent attempts changed?
 
 | Submitted | Work | Core mechanism |
 |---|---|---|
+| 2026-09-23 | [123 Rounds of Skill Discovery](papers/2609.31760.md) · [Paper](https://arxiv.org/abs/2609.31760) | Reports an iterative skill-discovery campaign where local tests pass but the target task remains unsolved, highlighting perception, execution coverage, and evaluator limitations. |
 | 2026-09-01 | [HarnessEvolve](papers/2609.00829.md) · [Paper](https://arxiv.org/abs/2609.00829) | Uses reference trajectories for failure attribution and screens harness updates through quality and performance gates to reduce regressions. |
 | 2026-08-17 | [Zetta](papers/2608.16590.md) · [Paper](https://arxiv.org/abs/2608.16590) | Evolves code critics and recovery skills around a frozen base policy, separating the timescales of actions, rollouts, and update validation. |
 | 2026-08-11 | [SHAPER](papers/2608.11350.md) · [Paper](https://arxiv.org/abs/2608.11350) | Keeps parameters frozen and uses environment rollouts to jointly optimize reusable skills and a context-code harness. |
@@ -124,6 +137,7 @@ How are failure causes identified and subsequent attempts changed?
 | 2026-07-09 | [Harness VLA](papers/2607.08448.md) · [Paper](https://arxiv.org/abs/2607.08448) | Uses a frozen VLA as a retryable contact primitive, combining analytical tools with task and global memory to extend manipulation capabilities. |
 | 2026-06-30 | [ASPIRE](papers/2607.00272.md) · [Paper](https://arxiv.org/abs/2607.00272) | Diagnoses failures using fine-grained multimodal execution records, searches for repair programs, and accumulates validated experience as skills. |
 | 2026-05-18 | [Robo-Cortex](papers/2605.18729.md) · [Paper](https://arxiv.org/abs/2605.18729) | Distills navigation trajectories into reusable heuristics, combining short-term reflection, long-term principle memory, and Imagine-then-Verify planning. |
+| 2026-03-25 | [RoboHarness (VLA adaptation)](papers/2603.24060.md) · [Paper](https://arxiv.org/abs/2603.24060) | Combines contrasting execution memories, failure attribution, and tool-based interventions around frozen VLAs, consolidating traces offline for future in-context adaptation. |
 | 2025-09-29 | [ViReSkill](papers/2509.24219.md) · [Paper](https://arxiv.org/abs/2509.24219) | Replans from visual observations after failures and stores successful plans in skill memory for later reuse. |
 | 2025-03-28 | [REMAC](papers/2503.22122.md) · [Paper](https://arxiv.org/abs/2503.22122) | Combines precondition and postcondition checks, self-reflection, and dynamic planning for long-horizon multi-robot tasks. |
 | 2024-11-26 | [MALMM](papers/2411.17636.md) · [Paper](https://arxiv.org/abs/2411.17636) | Assigns task planning, control-code generation, and process supervision to separate agents, using stepwise feedback to handle failures. |
@@ -135,6 +149,9 @@ How can experience become transferable, verifiable skills without degrading exis
 
 | Submitted | Work | Core mechanism |
 |---|---|---|
+| 2026-09-30 | [Scale and Selection](papers/2609.39304.md) · [Paper](https://arxiv.org/abs/2609.39304) | Optimizes a visual robot-control harness using rollout batches and accepts a revision only when it beats the incumbent on fixed evaluation cases. |
+| 2026-09-23 | [123 Rounds of Skill Discovery](papers/2609.31760.md) · [Paper](https://arxiv.org/abs/2609.31760) | Reports an iterative skill-discovery campaign where local tests pass but the target task remains unsolved, highlighting perception, execution coverage, and evaluator limitations. |
+| 2026-09-23 | [RegenHarness](papers/2609.27612.md) · [Paper](https://arxiv.org/abs/2609.27612) | Separates proposed actions from accepted task progress through evidence checks, versioned state, bounded recovery, and regression-gated changes to the harness configuration. |
 | 2026-09-01 | [HarnessEvolve](papers/2609.00829.md) · [Paper](https://arxiv.org/abs/2609.00829) | Uses reference trajectories for failure attribution and screens harness updates through quality and performance gates to reduce regressions. |
 | 2026-08-17 | [Zetta](papers/2608.16590.md) · [Paper](https://arxiv.org/abs/2608.16590) | Evolves code critics and recovery skills around a frozen base policy, separating the timescales of actions, rollouts, and update validation. |
 | 2026-08-11 | [SHAPER](papers/2608.11350.md) · [Paper](https://arxiv.org/abs/2608.11350) | Keeps parameters frozen and uses environment rollouts to jointly optimize reusable skills and a context-code harness. |
@@ -163,6 +180,8 @@ How does environment feedback enter training, reset, and redeployment?
 
 | Submitted | Work | Core mechanism |
 |---|---|---|
+| 2026-10-06 | [VeriFine](papers/2610.08761.md) · [Paper](https://arxiv.org/abs/2610.08761) | Alternates policy optimization with human-guided judge calibration, using diagnosed failures to revise the training curriculum and verification feedback. |
+| 2026-09-24 | [Robo-Harness K1](papers/2609.29389.md) · [Paper](https://arxiv.org/abs/2609.29389) | Exposes depth, persistent visual anchors, geometry measurements, and grasp proposals as tools; collected tool-call traces also support training smaller robot-use agents. |
 | 2026-09-16 | [HALTER](papers/2609.19413.md) · [Paper](https://arxiv.org/abs/2609.19413) | Builds scene graphs and composes atomic reset skills for automatic scoring, reset planning, and reset verification in long-horizon evaluation. |
 | 2026-07-15 | [Zero2Skill](papers/2607.14047.md) · [Paper](https://arxiv.org/abs/2607.14047) | Collects data, verifies outcomes, and resets autonomously; requests human help only after exhausting a retry budget, then parses language corrections into Corrective Memory for reuse across rounds. |
 | 2026-06-07 | [HARBOR](papers/2606.08610.md) · [Paper](https://arxiv.org/abs/2606.08610) | Breaks simulation RL engineering into executable stages and automates training pipelines through persistent artifacts, checkpoints, and experience reuse. |
@@ -213,6 +232,9 @@ Are interfaces, perception access, budgets, perturbations, and data splits match
 
 | Submitted | Work | Core mechanism |
 |---|---|---|
+| 2026-10-01 | [Language Model Agent Machine](papers/2610.02488.md) · [Paper](https://arxiv.org/abs/2610.02488) | Models harness costs through bounded context, persistent memory, model calls, and imperfect verification, deriving resource tradeoffs and checkpointing predictions. |
+| 2026-09-30 | [Scale and Selection](papers/2609.39304.md) · [Paper](https://arxiv.org/abs/2609.39304) | Optimizes a visual robot-control harness using rollout batches and accepts a revision only when it beats the incumbent on fixed evaluation cases. |
+| 2026-09-23 | [123 Rounds of Skill Discovery](papers/2609.31760.md) · [Paper](https://arxiv.org/abs/2609.31760) | Reports an iterative skill-discovery campaign where local tests pass but the target task remains unsolved, highlighting perception, execution coverage, and evaluator limitations. |
 | 2026-09-16 | [HALTER](papers/2609.19413.md) · [Paper](https://arxiv.org/abs/2609.19413) | Builds scene graphs and composes atomic reset skills for automatic scoring, reset planning, and reset verification in long-horizon evaluation. |
 | 2026-09-09 | [Show-Harness](papers/2609.10522.md) · [Paper](https://arxiv.org/abs/2609.10522) | A VLM emits discrete semantic action units that an embodiment-specific interpreter deterministically converts into local actions, with GUI support for collecting demonstrations. |
 | 2026-09-03 | [EvoHarnessBench](papers/2609.04280.md) · [Paper](https://arxiv.org/abs/2609.04280) | Expands an external harness in stages and separately evaluates retention of existing capabilities and adaptation to new ones. |
@@ -228,6 +250,7 @@ Which software-agent mechanisms are worth transferring to physical execution?
 
 | Submitted | Work | Core mechanism |
 |---|---|---|
+| 2026-10-01 | [Language Model Agent Machine](papers/2610.02488.md) · [Paper](https://arxiv.org/abs/2610.02488) | Models harness costs through bounded context, persistent memory, model calls, and imperfect verification, deriving resource tradeoffs and checkpointing predictions. |
 | 2026-09-03 | [EvoHarnessBench](papers/2609.04280.md) · [Paper](https://arxiv.org/abs/2609.04280) | Expands an external harness in stages and separately evaluates retention of existing capabilities and adaptation to new ones. |
 | 2026-09-01 | [HarnessDev](papers/2609.01437.md) · [Paper](https://arxiv.org/abs/2609.01437) | Evaluates the capability and cost of building and improving executable harnesses, including held-out tasks and transfer across models. |
 | 2026-09-01 | [HarnessEvolve](papers/2609.00829.md) · [Paper](https://arxiv.org/abs/2609.00829) | Uses reference trajectories for failure attribution and screens harness updates through quality and performance gates to reduce regressions. |

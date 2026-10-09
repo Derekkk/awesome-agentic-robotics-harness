@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-10-09 — Literature update
+
+- Added 9 verified entries, bringing the index to 45 papers: 6 first submitted after the previous review and 3 earlier papers added to close coverage gaps.
+- Added VeriFine, Language Model Agent Machine, Scale and Selection, Robo-Harness K1, RegenHarness, and the 123-round skill-discovery report.
+- Added HarnessVLN and two distinct RoboHarness papers, distinguished by arXiv ID and mechanism.
+- Updated SafeHarness to v2 (including its changed title), EvoHarnessBench to v3, and Harness VLA to v5; linked the official RPent code repository.
+- Filled missing version/author metadata for Harness Robotic OS and PonderPounce, and added GPT-Policy's official project/code links and evidence limitations.
+- Checked version/title metadata for all 36 previously curated IDs. Recorded the broad-discovery pagination limit without overwriting candidate data with partial results.
+
 ## 2026-09-22
 
 - Established 12 categories, 33 curated entries, and 3 unverified leads.

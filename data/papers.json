@@ -1,11 +1,221 @@
 [
   {
-    "id": "2609.20822",
-    "name": "SafeHarness",
-    "title": "Coding Agents with an Obstacle-Aware Harness for Safe Robot Manipulation",
-    "published": "2026-09-17",
+    "id": "2610.08761",
+    "name": "VeriFine",
+    "title": "VeriFine: Scaling Verification for Self-Improvement in Embodied Reasoning",
+    "published": "2026-10-06",
     "revised": null,
     "version": 1,
+    "authors": [
+      "Zewei Zhou",
+      "Rachel Luo",
+      "Yulong Cao",
+      "Chaowei Xiao",
+      "Chensheng Peng",
+      "Boyi Li",
+      "Thomas Tian",
+      "Zheng Lian",
+      "Yan Wang",
+      "Jiaqi Ma",
+      "Boris Ivanovic",
+      "Marco Pavone",
+      "Wenhao Ding"
+    ],
+    "tags": [
+      "verification",
+      "policy-learning"
+    ],
+    "interface": "rubric judge + adaptive curriculum + human calibration",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2610.08761",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-09",
+    "sources": [
+      "https://arxiv.org/abs/2610.08761v1",
+      "https://veri-fine.github.io/"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": "https://veri-fine.github.io/",
+    "summary_en": "Alternates policy optimization with human-guided judge calibration, using diagnosed failures to revise the training curriculum and verification feedback.",
+    "caveat_en": "Human calibration is part of the learning budget. Driving and navigation evidence does not establish manipulation performance; judge improvement needs independent evaluation."
+  },
+  {
+    "id": "2610.02488",
+    "name": "Language Model Agent Machine",
+    "title": "Harnessing LLMs as Agents: What Does It Cost?",
+    "published": "2026-10-01",
+    "revised": "2026-10-06",
+    "version": 2,
+    "authors": [
+      "Zelin Zhao",
+      "Xinyu Guo",
+      "Jingyuan Zhang",
+      "Yuxuan Zhang",
+      "Yongxin Chen"
+    ],
+    "tags": [
+      "evaluation",
+      "transfer"
+    ],
+    "interface": "resource-bounded model of agent execution",
+    "scope": "transfer",
+    "paper_url": "https://arxiv.org/abs/2610.02488",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-09",
+    "sources": [
+      "https://arxiv.org/abs/2610.02488v2"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Models harness costs through bounded context, persistent memory, model calls, and imperfect verification, deriving resource tradeoffs and checkpointing predictions.",
+    "caveat_en": "Theory and language-agent experiments provide a comparison framework, not robot validation. Physical latency, resets, and sensor errors require additional modeling."
+  },
+  {
+    "id": "2609.39304",
+    "name": "Scale and Selection",
+    "title": "Scale and Selection: What Makes Automatic Harness Evolution Work for Visual-Interface Robot Agents",
+    "published": "2026-09-30",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Zhijie Wei",
+      "Ferris Tan",
+      "Jinghui Wang"
+    ],
+    "tags": [
+      "skills",
+      "evaluation"
+    ],
+    "interface": "optimizer agent + rollout batches + champion-challenger selection",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2609.39304",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-09",
+    "sources": [
+      "https://arxiv.org/abs/2609.39304v1",
+      "https://arxiv.org/html/2609.39304v1"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Optimizes a visual robot-control harness using rollout batches and accepts a revision only when it beats the incumbent on fixed evaluation cases.",
+    "caveat_en": "Section 4 separates held-out tabletop tasks from RoboCasa optimization cases, which have no held-out set. Experiments are simulated; larger batches also consume more rollouts."
+  },
+  {
+    "id": "2609.29389",
+    "name": "Robo-Harness K1",
+    "title": "Robo-Harness K1: Harnessing Robot-Use Agents via Perception Augmentation",
+    "published": "2026-09-24",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Zexi Li",
+      "Yehang Zhang",
+      "Wenqian Li",
+      "Haojian Huang",
+      "Chenxu Wang",
+      "Shiyuan Deng",
+      "Yangkai Wei",
+      "Tianyi Zhang",
+      "Binghui Xie",
+      "Bohan Zhou",
+      "Yifan Chang",
+      "Kaiwen Zhou",
+      "Ying-Cong Chen",
+      "James Cheng",
+      "Yinchuan Li"
+    ],
+    "tags": [
+      "execution",
+      "policy-learning"
+    ],
+    "interface": "calibrated perception tools + generic motion commands",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2609.29389",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-09",
+    "sources": [
+      "https://arxiv.org/abs/2609.29389v1",
+      "https://arxiv.org/html/2609.29389v1"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Exposes depth, persistent visual anchors, geometry measurements, and grasp proposals as tools; collected tool-call traces also support training smaller robot-use agents.",
+    "caveat_en": "Appendix C.3 uses 18 matched cases for the frontier-model comparison and changes several interface components together. Distinguish frozen-model execution from student training and from published baselines with different protocols."
+  },
+  {
+    "id": "2609.31760",
+    "name": "123 Rounds of Skill Discovery",
+    "title": "What Stops Recursive Self-Improvement in Robotics? Lessons from 123 Rounds of Agentic Skill Discovery",
+    "published": "2026-09-23",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Jiaming Wang"
+    ],
+    "tags": [
+      "skills",
+      "reflection",
+      "evaluation"
+    ],
+    "interface": "agent-written skills + simulation tests + failure diagnosis",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2609.31760",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-09",
+    "sources": [
+      "https://arxiv.org/abs/2609.31760v1"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Reports an iterative skill-discovery campaign where local tests pass but the target task remains unsolved, highlighting perception, execution coverage, and evaluator limitations.",
+    "caveat_en": "This technical report analyzes one campaign; it does not establish that all recursive improvement fails. Local skill discovery and end-to-end task success must be measured separately."
+  },
+  {
+    "id": "2609.27612",
+    "name": "RegenHarness",
+    "title": "RegenHarness: A Robot Agent Harness with Evidence-Gated Recursive Self-Improvement",
+    "published": "2026-09-23",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Kailin Wang",
+      "Haoxiang Jie",
+      "Yaoyuan Yan",
+      "Zhiyou Heng",
+      "Zhaosong Li"
+    ],
+    "tags": [
+      "execution",
+      "verification",
+      "skills"
+    ],
+    "interface": "versioned evidence + task-state commit gates + bounded recovery",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2609.27612",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-09",
+    "sources": [
+      "https://arxiv.org/abs/2609.27612v1",
+      "https://arxiv.org/html/2609.27612v1"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Separates proposed actions from accepted task progress through evidence checks, versioned state, bounded recovery, and regression-gated changes to the harness configuration.",
+    "caveat_en": "Real quadruped case studies demonstrate execution integration, not broad causal evidence of continual improvement. The reference runtime is single-host; weight updates are outside the proposed loop."
+  },
+  {
+    "id": "2609.20822",
+    "name": "SafeHarness",
+    "title": "Coding Agents with Harness for Safe Robot Control",
+    "published": "2026-09-17",
+    "revised": "2026-10-02",
+    "version": 2,
     "authors": [
       "Bingxin Xu",
       "Yuzhang Shang",
@@ -21,15 +231,16 @@
     "scope": "robotics",
     "paper_url": "https://arxiv.org/abs/2609.20822",
     "verification": "primary_abstract",
-    "checked_on": "2026-09-22",
+    "checked_on": "2026-10-09",
     "sources": [
+      "https://arxiv.org/abs/2609.20822v2",
       "https://arxiv.org/abs/2609.20822"
     ],
     "metrics": [],
     "code_url": null,
     "project_url": null,
     "summary_en": "Turns obstacle-avoidance requirements into action choices during routing and contact, combining waypoint validation with replanning.",
-    "caveat_en": "Report task success and collision avoidance separately; neither constitutes a formal safety guarantee."
+    "caveat_en": "Report task success and collision avoidance separately; neither constitutes a formal safety guarantee. The v2 title is Coding Agents with Harness for Safe Robot Control; the earlier title referred to an obstacle-aware harness for manipulation."
   },
   {
     "id": "2609.19413",
@@ -97,15 +308,56 @@
     "scope": "robotics",
     "paper_url": "https://arxiv.org/abs/2609.19138",
     "verification": "primary_abstract",
-    "checked_on": "2026-09-22",
+    "checked_on": "2026-10-09",
     "sources": [
-      "https://arxiv.org/abs/2609.19138"
+      "https://arxiv.org/abs/2609.19138",
+      "https://github.com/cheng-haha/GPT-Policy",
+      "https://cheng-haha.github.io/GPT-Policy/"
+    ],
+    "metrics": [],
+    "code_url": "https://github.com/cheng-haha/GPT-Policy",
+    "project_url": "https://cheng-haha.github.io/GPT-Policy/",
+    "summary_en": "A context compiler retains task-relevant visual transitions; a VLM proposes robot tool actions that a constrained controller checks and executes.",
+    "caveat_en": "Context adaptation is not parameter learning. The project reports three real-robot trials per condition and observed inter-arm collisions; distinguish action-labeled context from human video and avoid broad reliability or safety claims."
+  },
+  {
+    "id": "2609.15195",
+    "name": "HarnessVLN",
+    "title": "HarnessVLN: Unifying Training-Free Embodied Navigation through an Agent Harness",
+    "published": "2026-09-14",
+    "revised": "2026-09-29",
+    "version": 3,
+    "authors": [
+      "Yang Chen",
+      "Lirong Che",
+      "Zhenyu Huang",
+      "Wenbo Fu",
+      "Chuang Wang",
+      "Xu Cao",
+      "Daqi Liu",
+      "Yuzhe Yang",
+      "Jian Su",
+      "Lan-Zhe Guo"
+    ],
+    "tags": [
+      "execution",
+      "memory",
+      "verification"
+    ],
+    "interface": "navigation tools + event memory + spatiotemporal graph",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2609.15195",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-09",
+    "sources": [
+      "https://arxiv.org/abs/2609.15195v3",
+      "https://agibot-harnessvln.netlify.app/"
     ],
     "metrics": [],
     "code_url": null,
-    "project_url": null,
-    "summary_en": "A context compiler retains task-relevant visual transitions; a VLM proposes robot tool actions that a constrained controller checks and executes.",
-    "caveat_en": "Context adaptation is not parameter learning; distinguish human-video configurations from references that include actions."
+    "project_url": "https://agibot-harnessvln.netlify.app/",
+    "summary_en": "Checks navigation proposals against evidence and geometry, using event memory and a persistent spatial graph to guide execution, recovery, and termination.",
+    "caveat_en": "Training-free refers to task adaptation, not the absence of pretrained perception or control. Navigation success does not establish contact-manipulation capability."
   },
   {
     "id": "2609.11561",
@@ -183,8 +435,15 @@
     "title": "Harness Robotic OS: A Unified Embodied-Agent Runtime for Closed-Loop Quadruped Inspection",
     "published": "2026-09-10",
     "revised": null,
-    "version": null,
-    "authors": [],
+    "version": 1,
+    "authors": [
+      "Yaoyuan Yan",
+      "Zhiyou Heng",
+      "Haoxiang Jie",
+      "Gang Liu",
+      "Hongjie Yan",
+      "Wei Zhou"
+    ],
     "tags": [
       "execution",
       "memory",
@@ -193,9 +452,10 @@
     "interface": "inspection runtime",
     "scope": "robotics",
     "paper_url": "https://arxiv.org/abs/2609.11225",
-    "verification": "primary_search_abstract",
-    "checked_on": "2026-09-22",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-09",
     "sources": [
+      "https://arxiv.org/abs/2609.11225v1",
       "https://arxiv.org/abs/2609.11225"
     ],
     "metrics": [],
@@ -246,8 +506,8 @@
     "name": "EvoHarnessBench",
     "title": "EvoHarnessBench: Can Your Agents Keep Pace with an Evolving Harness?",
     "published": "2026-09-03",
-    "revised": "2026-09-10",
-    "version": 2,
+    "revised": "2026-09-26",
+    "version": 3,
     "authors": [
       "Zixuan Ke",
       "Vaidehi Patil",
@@ -270,8 +530,9 @@
     "scope": "transfer",
     "paper_url": "https://arxiv.org/abs/2609.04280",
     "verification": "primary_abstract",
-    "checked_on": "2026-09-22",
+    "checked_on": "2026-10-09",
     "sources": [
+      "https://arxiv.org/abs/2609.04280v3",
       "https://arxiv.org/abs/2609.04280"
     ],
     "metrics": [],
@@ -368,9 +629,15 @@
     "name": "PonderPounce",
     "title": "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control",
     "published": "2026-08-25",
-    "revised": null,
-    "version": null,
-    "authors": [],
+    "revised": "2026-09-17",
+    "version": 2,
+    "authors": [
+      "Suhwan Choi",
+      "Jaeyoon Jung",
+      "Sungkyung Kim",
+      "Yunsung Lee",
+      "Youngjae Yu"
+    ],
     "tags": [
       "memory",
       "dual-system"
@@ -378,9 +645,10 @@
     "interface": "latent cognition",
     "scope": "robotics",
     "paper_url": "https://arxiv.org/abs/2608.24115",
-    "verification": "official_project",
-    "checked_on": "2026-09-22",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-09",
     "sources": [
+      "https://arxiv.org/abs/2608.24115v2",
       "https://worv-ai.github.io/ponderpounce/"
     ],
     "metrics": [],
@@ -468,6 +736,42 @@
     "project_url": null,
     "summary_en": "Keeps parameters frozen and uses environment rollouts to jointly optimize reusable skills and a context-code harness.",
     "caveat_en": "Check that target-environment adaptation data is separated from generalization tests."
+  },
+  {
+    "id": "2607.18060",
+    "name": "RoboHarness (policy orchestration)",
+    "title": "RoboHarness: Memory-Driven Orchestration of Heterogeneous Robot Policies for Long-Horizon Planning",
+    "published": "2026-07-20",
+    "revised": "2026-09-29",
+    "version": 3,
+    "authors": [
+      "Jinbang Huang",
+      "Zhiyuan Li",
+      "Yuanzhao Hu",
+      "Ran Qi",
+      "Yixin Xiao",
+      "Mark Coates",
+      "Tongtong Cao",
+      "Zhanguang Zhang",
+      "Yingxue Zhang"
+    ],
+    "tags": [
+      "execution",
+      "memory"
+    ],
+    "interface": "heterogeneous policy routing + Memory Bridge",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2607.18060",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-09",
+    "sources": [
+      "https://arxiv.org/abs/2607.18060v3"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Packages heterogeneous robot policies as skills, uses memory to route tasks by capability, and bridges handoff states without jointly retraining the policies.",
+    "caveat_en": "Distinct from RoboHarness arXiv:2603.24060. Evaluate routing gains separately from handoff improvements and account for each underlying policy and its training data."
   },
   {
     "id": "2607.16636",
@@ -560,8 +864,8 @@
     "name": "Harness VLA",
     "title": "Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents",
     "published": "2026-07-09",
-    "revised": "2026-09-02",
-    "version": 4,
+    "revised": "2026-09-24",
+    "version": 5,
     "authors": [
       "Yixian Zhang",
       "Huanming Zhang",
@@ -589,9 +893,11 @@
     "scope": "robotics",
     "paper_url": "https://arxiv.org/abs/2607.08448",
     "verification": "primary_abstract",
-    "checked_on": "2026-09-22",
+    "checked_on": "2026-10-09",
     "sources": [
-      "https://arxiv.org/abs/2607.08448"
+      "https://arxiv.org/abs/2607.08448v5",
+      "https://arxiv.org/abs/2607.08448",
+      "https://github.com/RLinf/RPent"
     ],
     "metrics": [],
     "code_url": "https://github.com/RLinf/RPent",
@@ -788,6 +1094,39 @@
     "project_url": null,
     "summary_en": "Pools deployment experience from multiple robots, continually updates a generalist VLA using DIVL and QAM, and redeploys it.",
     "caveat_en": "The paper studies 16 robots and 8 tasks; this does not establish effectiveness at larger scales or in heterogeneous fleets."
+  },
+  {
+    "id": "2603.24060",
+    "name": "RoboHarness (VLA adaptation)",
+    "title": "RoboHarness: A Memory-Augmented Policy Harness for Vision-Language-Action Model Robustness via In-Context Adaptation",
+    "published": "2026-03-25",
+    "revised": "2026-08-12",
+    "version": 3,
+    "authors": [
+      "Zhuoran Li",
+      "Zhiyang Li",
+      "Kaijun Zhou",
+      "Jinyu Gu"
+    ],
+    "tags": [
+      "execution",
+      "memory",
+      "reflection"
+    ],
+    "interface": "dual-memory retrieval + VLM orchestration + MCP interventions",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2603.24060",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-09",
+    "sources": [
+      "https://arxiv.org/abs/2603.24060v3",
+      "https://github.com/LZY-1021/RoboHarness"
+    ],
+    "metrics": [],
+    "code_url": "https://github.com/LZY-1021/RoboHarness",
+    "project_url": null,
+    "summary_en": "Combines contrasting execution memories, failure attribution, and tool-based interventions around frozen VLAs, consolidating traces offline for future in-context adaptation.",
+    "caveat_en": "Distinct from RoboHarness arXiv:2607.18060. Frozen policy weights do not remove perception, intervention-tool, or memory-construction costs; compare matched backbone and disturbance settings."
   },
   {
     "id": "2603.22435",
