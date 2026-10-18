@@ -2,7 +2,7 @@
 
 ## Current status
 
-- Latest manual research review: 2026-10-09, with 45 curated papers. See the [latest review](../reports/2026-10-09.md) for additions, revisions, and coverage limits.
+- Latest manual research review: 2026-10-18, with 52 curated papers. See the [latest review](../reports/2026-10-18.md) for additions, revisions, and coverage limits.
 - Repository source, workflows, and offline validation are prepared. The publication target is [Derekkk/awesome-agentic-robotics-harness](https://github.com/Derekkk/awesome-agentic-robotics-harness).
 - The initial research session recorded a separate ChatGPT public-web digest scheduled for Monday mornings at approximately 09:00 Hong Kong time. That external automation is not managed by this repository; its current settings and output language need to be checked separately.
 - Repository documentation, curated summaries, and generated outputs use English. Automated discovery collects metadata; it does not perform research or automatically verify papers.
@@ -56,4 +56,6 @@ Search for new and revised papers from the last seven days, expanding to thirty 
 
 ## Known limitations
 
-Keyword search does not guarantee complete recall; supplement it with conference papers, author projects, and citation tracking. On 2026-10-09, live arXiv lookup successfully checked the versions and titles of all 36 previously curated IDs; the metadata snapshot is in `data/version_check.json`. Broad discovery with a 20-day lookback reached the default pagination cap and correctly stopped without writing partial results. This review therefore combines targeted web discovery with a complete ID-based version check, and does not claim exhaustive discovery. Increase `--max-pages` when a broad search exceeds its cap. GitHub Actions execution is not verified by these local checks. BibTeX entries leave author fields empty when primary metadata was unavailable; verify and complete them before use.
+Keyword search does not guarantee complete recall; supplement it with conference papers, author projects, and citation tracking. On 2026-10-09, live arXiv lookup successfully checked the versions and titles of all 36 previously curated IDs; the metadata snapshot is in `data/version_check.json`. Broad discovery with a 20-day lookback reached the default pagination cap and correctly stopped without writing partial results. The October 9 review therefore combines targeted web discovery with a complete ID-based version check, and does not claim exhaustive discovery. Increase `--max-pages` when a broad search exceeds its cap. GitHub Actions execution is not verified by these local checks. BibTeX entries leave author fields empty when primary metadata was unavailable; verify and complete them before use.
+
+On 2026-10-18, targeted primary-source research added seven papers. A batch audit of the 45 existing IDs failed with HTTP 429 after retries. Four existing entries were spot-checked through official abstract pages; their versions were unchanged. This is not a complete version audit. See the [review](../reports/2026-10-18.md) and [partial metadata check](../data/version_check-2026-10-18.json); the historical October 9 snapshot remains unchanged.

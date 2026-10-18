@@ -1,5 +1,268 @@
 [
   {
+    "id": "2610.21453",
+    "name": "CarryOn",
+    "title": "CarryOn: A Dual-Loop Harness for Personalized and Reliable Robot Assistance",
+    "published": "2026-10-15",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Zixuan Wang",
+      "Yuqi Liu",
+      "Yuxin Chen",
+      "Sengqiao Yang",
+      "Jinhui Ye",
+      "Pengguang Chen",
+      "Changsheng Lu",
+      "Shu Liu",
+      "Bei Yu",
+      "Jiaya Jia"
+    ],
+    "tags": [
+      "memory",
+      "safety",
+      "reflection"
+    ],
+    "interface": "persistent user/scene context + action shielding + recovery skills",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2610.21453",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-18",
+    "sources": [
+      "https://arxiv.org/abs/2610.21453v1",
+      "https://vincent2311.github.io/Projects/CarryOn/",
+      "https://github.com/JIA-Lab-research/CarryOn"
+    ],
+    "metrics": [],
+    "code_url": "https://github.com/JIA-Lab-research/CarryOn",
+    "project_url": "https://vincent2311.github.io/Projects/CarryOn/",
+    "summary_en": "Combines preference-aware planning with runtime action shielding and reusable recovery skills around a frozen VLA; interaction updates context and reflection refines recovery.",
+    "caveat_en": "The project reports cumulative completion across reflection rounds and retries, not single-attempt recovery accuracy. Separate personalization, violation rate, and recovery; reduced violations are not a formal safety guarantee."
+  },
+  {
+    "id": "2610.20524",
+    "name": "Temporal Flow Policy",
+    "title": "Physical Time as a Missing Dimension of Robot Policy Memory Dynamics",
+    "published": "2026-10-14",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Yushen Liang",
+      "Yue Peng",
+      "Baosheng Jin",
+      "Tianluo Zhang",
+      "Xinyu Zhang",
+      "Shuyi Zhou",
+      "Zhuoran Chen",
+      "Xinqi Liu",
+      "Shenji Wan"
+    ],
+    "tags": [
+      "memory"
+    ],
+    "interface": "elapsed-time-conditioned learned memory state",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2610.20524",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-18",
+    "sources": [
+      "https://arxiv.org/abs/2610.20524v1"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Learns memory transitions that preserve events and advance over measured physical intervals, conditioning diffusion and flow-matching robot policies on the resulting state.",
+    "caveat_en": "This is a trained policy-memory mechanism, not a training-free agent wrapper. Match observation timing, history, architecture, and supervision when comparing memory designs."
+  },
+  {
+    "id": "2610.18867",
+    "name": "EmbodiedEvo",
+    "title": "EmbodiedEvo: Self-Evolving Coding Agent For Physical Intelligence",
+    "published": "2026-10-13",
+    "revised": "2026-10-14",
+    "version": 2,
+    "authors": [
+      "Wenyi Li",
+      "Yizhe Chi",
+      "Youjie Zheng",
+      "Chunyu Liu",
+      "Xiaoqiu Wang",
+      "Mingju Gao",
+      "Zheng Jiang",
+      "Deyao Hong",
+      "Calvin Xiao",
+      "Kaisen Yang",
+      "Qinhuai Na"
+    ],
+    "tags": [
+      "execution",
+      "skills",
+      "memory"
+    ],
+    "interface": "programmatic robot control + reusable code skills and lessons",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2610.18867",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-18",
+    "sources": [
+      "https://arxiv.org/abs/2610.18867v2"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Distills execution feedback into reusable code skills and diagnostic lessons, then freezes this experience for independent agents in unseen scenes without weight updates.",
+    "caveat_en": "Experience is collected on one scene per task before evaluation; this is not experience-free execution or proof of unseen-task transfer. RoboDojo-Sim scores do not establish real-robot performance."
+  },
+  {
+    "id": "2610.18835",
+    "name": "RoboSimStudio",
+    "title": "RoboSimStudio: An Interactive Toolkit for Human and Agent Rapid Real2Sim of Robot Manipulation Tasks",
+    "published": "2026-10-13",
+    "revised": "2026-10-14",
+    "version": 2,
+    "authors": [
+      "Kaiyuan Chen",
+      "Shuangyu Xie",
+      "Uksang Yoo",
+      "Xinyue Zhu",
+      "Cael Magner",
+      "Alvin Zhu",
+      "Daehwa Kim",
+      "Eric Heiden",
+      "Erwin Coumans",
+      "Miles Macklin",
+      "Spencer Huang",
+      "Ken Goldberg"
+    ],
+    "tags": [
+      "simulation"
+    ],
+    "interface": "editable physics models + human/agent real2sim refinement",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2610.18835",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-18",
+    "sources": [
+      "https://arxiv.org/abs/2610.18835v2",
+      "https://robosimstudio.github.io/"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": "https://robosimstudio.github.io/",
+    "summary_en": "Exposes solver choices, contact models, and physical parameters for humans and coding agents to refine simulations against observed behavior, supporting agentic real2sim2real experiments.",
+    "caveat_en": "Building a visually plausible simulator is not sufficient evidence of correct contact dynamics. Account for human tuning, force feedback, construction time, and separate real-world transfer tests."
+  },
+  {
+    "id": "2610.13376",
+    "name": "EndoRSI",
+    "title": "EndoRSI: Physical-Evidence-Driven Recursive Improvement of Endoscopic Robot Policies",
+    "published": "2026-10-09",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Chi Kit Ng",
+      "Yidong Zhang",
+      "Tianchun Wu",
+      "Siu Hing Lui",
+      "Hanlin Zhao",
+      "Huxin Gao",
+      "Hongliang Ren"
+    ],
+    "tags": [
+      "policy-learning",
+      "reflection",
+      "safety"
+    ],
+    "interface": "coding-agent policy revision + human-authorized physical experiments",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2610.13376",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-18",
+    "sources": [
+      "https://arxiv.org/abs/2610.13376v1"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Uses failed physical experiments to revise endoscopic policies while isolating robot execution in a constrained runtime under human authorization.",
+    "caveat_en": "The abstract reports laboratory and ex-vivo porcine evidence, not clinical deployment or human-patient safety. Include human oversight and distinguish generation-specific adaptation from frozen-policy evaluation."
+  },
+  {
+    "id": "2610.12424",
+    "name": "RoboRSI",
+    "title": "RoboRSI: Stable, efficient, and reusable robot self-evolution in complex real-world environments",
+    "published": "2026-10-08",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Zimo Wen",
+      "Yijin Chen",
+      "Yuxuan Cao",
+      "Wendi Chen",
+      "Yanwen Zou",
+      "Wenye Yu",
+      "Fuhang Kuang",
+      "Han Xue",
+      "Jun Lv",
+      "Chuan Wen",
+      "Cewu Lu"
+    ],
+    "tags": [
+      "execution",
+      "skills",
+      "reflection"
+    ],
+    "interface": "hierarchical skill contracts + localized revisions + reviewed releases",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2610.12424",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-18",
+    "sources": [
+      "https://arxiv.org/abs/2610.12424v1",
+      "https://lab.noematrix.ai/blog/2-roborsi/",
+      "https://github.com/nssmd/RoboRSI"
+    ],
+    "metrics": [],
+    "code_url": "https://github.com/nssmd/RoboRSI",
+    "project_url": "https://lab.noematrix.ai/blog/2-roborsi/",
+    "summary_en": "Assigns outcomes to branches of a skill hierarchy, confines repairs to responsible capabilities, and validates reusable skill releases with coordinated agent roles and human steering.",
+    "caveat_en": "Human supervision remains part of real-world deployment. The project distinguishes cumulative task pass rates from per-episode success; account for repeated attempts and parallel execution."
+  },
+  {
+    "id": "2610.08995",
+    "name": "PhysEvo",
+    "title": "PhysEvo: Astra Can Act, Let It",
+    "published": "2026-10-06",
+    "revised": null,
+    "version": 1,
+    "authors": [
+      "Wenqing Tian",
+      "Zeyu Zhang",
+      "Zhaocheng Liu",
+      "Fengwei Liu",
+      "Qiang Liu",
+      "Liang Wang"
+    ],
+    "tags": [
+      "execution",
+      "skills",
+      "reflection"
+    ],
+    "interface": "task/meta-agent loop + persistent tool and skill revisions",
+    "scope": "robotics",
+    "paper_url": "https://arxiv.org/abs/2610.08995",
+    "verification": "primary_abstract",
+    "checked_on": "2026-10-18",
+    "sources": [
+      "https://arxiv.org/abs/2610.08995v1"
+    ],
+    "metrics": [],
+    "code_url": null,
+    "project_url": null,
+    "summary_en": "Uses execution trajectories to revise control tools, manipulation skills, and diagnostic tools around a frozen model, retaining tested changes for subsequent tasks and improvement.",
+    "caveat_en": "Held-out layouts use retained task-specific versions. Real-world results include continued skill revision and 25 trials across five tasks; they are not zero-shot sim-to-real evidence or directly comparable to different RoboDojo protocols."
+  },
+  {
     "id": "2610.08761",
     "name": "VeriFine",
     "title": "VeriFine: Scaling Verification for Self-Improvement in Embodied Reasoning",

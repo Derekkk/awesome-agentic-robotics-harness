@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-18 — Literature update
+
+- Added 7 primary-source-verified entries, bringing the index to 52 papers: CarryOn, Temporal Flow Policy, EmbodiedEvo, RoboSimStudio, EndoRSI, RoboRSI, and PhysEvo.
+- Recorded current versions, authors, official project/code links where checked, and English mechanism summaries with evaluation limitations.
+- Distinguished cumulative recovery from per-attempt success, frozen experience transfer from continued adaptation, and laboratory evidence from clinical deployment.
+- Spot-checked 4 existing entries with no version changes found. The attempted full 45-ID audit failed with arXiv HTTP 429; retained the October 9 audit and documented partial coverage.
+
 ## 2026-10-09 — Literature update
 
 - Added 9 verified entries, bringing the index to 45 papers: 6 first submitted after the previous review and 3 earlier papers added to close coverage gaps.

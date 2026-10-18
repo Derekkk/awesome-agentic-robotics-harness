@@ -2,7 +2,7 @@
 
 > From closed-loop execution to continual learning: a research index of papers, system mechanisms, evaluation, and open questions.
 
-Latest manual review: **2026-10-09** · **45 indexed papers** · See the unverified list for pending entries.
+Latest manual review: **2026-10-18** · **52 indexed papers** · See the unverified list for pending entries.
 
 This review primarily checked original abstracts and author project pages, rather than reproducing every paper in full. Each card states its verification scope; research questions and categories reflect maintainer analysis.
 
@@ -10,7 +10,8 @@ This review primarily checked original abstracts and author project pages, rathe
 
 - [Research agenda and testable hypotheses](docs/research-agenda.md)
 - [Architecture comparison](docs/architecture-comparison.md)
-- [Latest review: 2026-10-09](reports/2026-10-09.md)
+- [Latest review: 2026-10-18](reports/2026-10-18.md)
+- [Previous review: 2026-10-09](reports/2026-10-09.md)
 - [Initial review and corrections](reports/2026-09-22.md)
 - [Evaluation protocol](docs/evaluation-protocol.md) · [Evidence policy](docs/evidence-policy.md)
 - [Daily candidates](docs/inbox.md) · [Unverified leads](docs/unverified.md)
@@ -31,16 +32,16 @@ Execution, Learning, and Fleet are overlapping organizational perspectives. Mult
 
 | Area | Core question | Entries |
 |---|---|---:|
-| [Closed-loop execution and tool interfaces](#execution) | What does the reasoning model output, how do tools connect to controllers, and when should the system observe and replan? | 20 |
-| [Long-term memory and context](#memory) | What history is stored, and how is it retrieved, compressed, and used to guide actions? | 13 |
+| [Closed-loop execution and tool interfaces](#execution) | What does the reasoning model output, how do tools connect to controllers, and when should the system observe and replan? | 23 |
+| [Long-term memory and context](#memory) | What history is stored, and how is it retrieved, compressed, and used to guide actions? | 16 |
 | [State verification and failure monitoring](#verification) | How can action completion, task success, and the need for recovery be distinguished? | 13 |
-| [Reflection, attribution, and recovery](#reflection) | How are failure causes identified and subsequent attempts changed? | 12 |
-| [Skill and harness evolution](#skills) | How can experience become transferable, verifiable skills without degrading existing capabilities? | 9 |
+| [Reflection, attribution, and recovery](#reflection) | How are failure causes identified and subsequent attempts changed? | 16 |
+| [Skill and harness evolution](#skills) | How can experience become transferable, verifiable skills without degrading existing capabilities? | 12 |
 | [Fast and slow systems and real-time execution](#dual-system) | At what frequencies do reasoning, action generation, playback, and feedback operate? | 6 |
-| [Policy learning and autonomous data loops](#policy-learning) | How does environment feedback enter training, reset, and redeployment? | 10 |
-| [Digital twins and simulation validation](#simulation) | How can physical exploration costs be reduced and transfer be tested? | 2 |
+| [Policy learning and autonomous data loops](#policy-learning) | How does environment feedback enter training, reset, and redeployment? | 11 |
+| [Digital twins and simulation validation](#simulation) | How can physical exploration costs be reduced and transfer be tested? | 3 |
 | [Multi-robot collaboration and collective learning](#fleet) | What evidence supports shared state, shared skills, and shared weights, respectively? | 4 |
-| [Runtime constraints and safety](#safety) | How are task constraints enforced during routing, contact, resource use, and fallback? | 4 |
+| [Runtime constraints and safety](#safety) | How are task constraints enforced during routing, contact, resource use, and fallback? | 6 |
 | [Evaluation and reproducibility](#evaluation) | Are interfaces, perception access, budgets, perturbations, and data splits matched? | 10 |
 | [Methods from general-purpose agents](#transfer) | Which software-agent mechanisms are worth transferring to physical execution? | 4 |
 
@@ -59,6 +60,9 @@ What does the reasoning model output, how do tools connect to controllers, and w
 
 | Submitted | Work | Core mechanism |
 |---|---|---|
+| 2026-10-13 | [EmbodiedEvo](papers/2610.18867.md) · [Paper](https://arxiv.org/abs/2610.18867) | Distills execution feedback into reusable code skills and diagnostic lessons, then freezes this experience for independent agents in unseen scenes without weight updates. |
+| 2026-10-08 | [RoboRSI](papers/2610.12424.md) · [Paper](https://arxiv.org/abs/2610.12424) | Assigns outcomes to branches of a skill hierarchy, confines repairs to responsible capabilities, and validates reusable skill releases with coordinated agent roles and human steering. |
+| 2026-10-06 | [PhysEvo](papers/2610.08995.md) · [Paper](https://arxiv.org/abs/2610.08995) | Uses execution trajectories to revise control tools, manipulation skills, and diagnostic tools around a frozen model, retaining tested changes for subsequent tasks and improvement. |
 | 2026-09-24 | [Robo-Harness K1](papers/2609.29389.md) · [Paper](https://arxiv.org/abs/2609.29389) | Exposes depth, persistent visual anchors, geometry measurements, and grasp proposals as tools; collected tool-call traces also support training smaller robot-use agents. |
 | 2026-09-23 | [RegenHarness](papers/2609.27612.md) · [Paper](https://arxiv.org/abs/2609.27612) | Separates proposed actions from accepted task progress through evidence checks, versioned state, bounded recovery, and regression-gated changes to the harness configuration. |
 | 2026-09-17 | [SafeHarness](papers/2609.20822.md) · [Paper](https://arxiv.org/abs/2609.20822) | Turns obstacle-avoidance requirements into action choices during routing and contact, combining waypoint validation with replanning. |
@@ -87,6 +91,9 @@ What history is stored, and how is it retrieved, compressed, and used to guide a
 
 | Submitted | Work | Core mechanism |
 |---|---|---|
+| 2026-10-15 | [CarryOn](papers/2610.21453.md) · [Paper](https://arxiv.org/abs/2610.21453) | Combines preference-aware planning with runtime action shielding and reusable recovery skills around a frozen VLA; interaction updates context and reflection refines recovery. |
+| 2026-10-14 | [Temporal Flow Policy](papers/2610.20524.md) · [Paper](https://arxiv.org/abs/2610.20524) | Learns memory transitions that preserve events and advance over measured physical intervals, conditioning diffusion and flow-matching robot policies on the resulting state. |
+| 2026-10-13 | [EmbodiedEvo](papers/2610.18867.md) · [Paper](https://arxiv.org/abs/2610.18867) | Distills execution feedback into reusable code skills and diagnostic lessons, then freezes this experience for independent agents in unseen scenes without weight updates. |
 | 2026-09-16 | [GPT-Policy](papers/2609.19138.md) · [Paper](https://arxiv.org/abs/2609.19138) | A context compiler retains task-relevant visual transitions; a VLM proposes robot tool actions that a constrained controller checks and executes. |
 | 2026-09-14 | [HarnessVLN](papers/2609.15195.md) · [Paper](https://arxiv.org/abs/2609.15195) | Checks navigation proposals against evidence and geometry, using event memory and a persistent spatial graph to guide execution, recovery, and termination. |
 | 2026-09-10 | [MaP-WAM](papers/2609.11561.md) · [Paper](https://arxiv.org/abs/2609.11561) | Uses long histories for planning, compresses them into segment-level language and visual guidance, and predicts action chunks and execution progress with an action model. |
@@ -129,6 +136,10 @@ How are failure causes identified and subsequent attempts changed?
 
 | Submitted | Work | Core mechanism |
 |---|---|---|
+| 2026-10-15 | [CarryOn](papers/2610.21453.md) · [Paper](https://arxiv.org/abs/2610.21453) | Combines preference-aware planning with runtime action shielding and reusable recovery skills around a frozen VLA; interaction updates context and reflection refines recovery. |
+| 2026-10-09 | [EndoRSI](papers/2610.13376.md) · [Paper](https://arxiv.org/abs/2610.13376) | Uses failed physical experiments to revise endoscopic policies while isolating robot execution in a constrained runtime under human authorization. |
+| 2026-10-08 | [RoboRSI](papers/2610.12424.md) · [Paper](https://arxiv.org/abs/2610.12424) | Assigns outcomes to branches of a skill hierarchy, confines repairs to responsible capabilities, and validates reusable skill releases with coordinated agent roles and human steering. |
+| 2026-10-06 | [PhysEvo](papers/2610.08995.md) · [Paper](https://arxiv.org/abs/2610.08995) | Uses execution trajectories to revise control tools, manipulation skills, and diagnostic tools around a frozen model, retaining tested changes for subsequent tasks and improvement. |
 | 2026-09-23 | [123 Rounds of Skill Discovery](papers/2609.31760.md) · [Paper](https://arxiv.org/abs/2609.31760) | Reports an iterative skill-discovery campaign where local tests pass but the target task remains unsolved, highlighting perception, execution coverage, and evaluator limitations. |
 | 2026-09-01 | [HarnessEvolve](papers/2609.00829.md) · [Paper](https://arxiv.org/abs/2609.00829) | Uses reference trajectories for failure attribution and screens harness updates through quality and performance gates to reduce regressions. |
 | 2026-08-17 | [Zetta](papers/2608.16590.md) · [Paper](https://arxiv.org/abs/2608.16590) | Evolves code critics and recovery skills around a frozen base policy, separating the timescales of actions, rollouts, and update validation. |
@@ -149,6 +160,9 @@ How can experience become transferable, verifiable skills without degrading exis
 
 | Submitted | Work | Core mechanism |
 |---|---|---|
+| 2026-10-13 | [EmbodiedEvo](papers/2610.18867.md) · [Paper](https://arxiv.org/abs/2610.18867) | Distills execution feedback into reusable code skills and diagnostic lessons, then freezes this experience for independent agents in unseen scenes without weight updates. |
+| 2026-10-08 | [RoboRSI](papers/2610.12424.md) · [Paper](https://arxiv.org/abs/2610.12424) | Assigns outcomes to branches of a skill hierarchy, confines repairs to responsible capabilities, and validates reusable skill releases with coordinated agent roles and human steering. |
+| 2026-10-06 | [PhysEvo](papers/2610.08995.md) · [Paper](https://arxiv.org/abs/2610.08995) | Uses execution trajectories to revise control tools, manipulation skills, and diagnostic tools around a frozen model, retaining tested changes for subsequent tasks and improvement. |
 | 2026-09-30 | [Scale and Selection](papers/2609.39304.md) · [Paper](https://arxiv.org/abs/2609.39304) | Optimizes a visual robot-control harness using rollout batches and accepts a revision only when it beats the incumbent on fixed evaluation cases. |
 | 2026-09-23 | [123 Rounds of Skill Discovery](papers/2609.31760.md) · [Paper](https://arxiv.org/abs/2609.31760) | Reports an iterative skill-discovery campaign where local tests pass but the target task remains unsolved, highlighting perception, execution coverage, and evaluator limitations. |
 | 2026-09-23 | [RegenHarness](papers/2609.27612.md) · [Paper](https://arxiv.org/abs/2609.27612) | Separates proposed actions from accepted task progress through evidence checks, versioned state, bounded recovery, and regression-gated changes to the harness configuration. |
@@ -180,6 +194,7 @@ How does environment feedback enter training, reset, and redeployment?
 
 | Submitted | Work | Core mechanism |
 |---|---|---|
+| 2026-10-09 | [EndoRSI](papers/2610.13376.md) · [Paper](https://arxiv.org/abs/2610.13376) | Uses failed physical experiments to revise endoscopic policies while isolating robot execution in a constrained runtime under human authorization. |
 | 2026-10-06 | [VeriFine](papers/2610.08761.md) · [Paper](https://arxiv.org/abs/2610.08761) | Alternates policy optimization with human-guided judge calibration, using diagnosed failures to revise the training curriculum and verification feedback. |
 | 2026-09-24 | [Robo-Harness K1](papers/2609.29389.md) · [Paper](https://arxiv.org/abs/2609.29389) | Exposes depth, persistent visual anchors, geometry measurements, and grasp proposals as tools; collected tool-call traces also support training smaller robot-use agents. |
 | 2026-09-16 | [HALTER](papers/2609.19413.md) · [Paper](https://arxiv.org/abs/2609.19413) | Builds scene graphs and composes atomic reset skills for automatic scoring, reset planning, and reset verification in long-horizon evaluation. |
@@ -198,6 +213,7 @@ How can physical exploration costs be reduced and transfer be tested?
 
 | Submitted | Work | Core mechanism |
 |---|---|---|
+| 2026-10-13 | [RoboSimStudio](papers/2610.18835.md) · [Paper](https://arxiv.org/abs/2610.18835) | Exposes solver choices, contact models, and physical parameters for humans and coding agents to refine simulations against observed behavior, supporting agentic real2sim2real experiments. |
 | 2026-02-09 | [TwinRL](papers/2602.09023.md) · [Paper](https://arxiv.org/abs/2602.09023) | Reduces online learning cost through SFT support-set expansion, digital-twin RL warm-up, and targeted real-world exploration. |
 | 2025-11-25 | [Arcadia](papers/2512.00076.md) · [Paper](https://arxiv.org/abs/2512.00076) | Connects autonomous exploration, scene reconstruction, shared embodied representations, and simulation updates driven by real-world feedback. |
 
@@ -220,6 +236,8 @@ How are task constraints enforced during routing, contact, resource use, and fal
 
 | Submitted | Work | Core mechanism |
 |---|---|---|
+| 2026-10-15 | [CarryOn](papers/2610.21453.md) · [Paper](https://arxiv.org/abs/2610.21453) | Combines preference-aware planning with runtime action shielding and reusable recovery skills around a frozen VLA; interaction updates context and reflection refines recovery. |
+| 2026-10-09 | [EndoRSI](papers/2610.13376.md) · [Paper](https://arxiv.org/abs/2610.13376) | Uses failed physical experiments to revise endoscopic policies while isolating robot execution in a constrained runtime under human authorization. |
 | 2026-09-17 | [SafeHarness](papers/2609.20822.md) · [Paper](https://arxiv.org/abs/2609.20822) | Turns obstacle-avoidance requirements into action choices during routing and contact, combining waypoint validation with replanning. |
 | 2026-09-10 | [FARM](papers/2609.11445.md) · [Paper](https://arxiv.org/abs/2609.11445) | Freezes the VLA-JEPA predictive backbone and trains only a lightweight readout, producing failure scores from internal states and aggregating risk over observed history. |
 | 2026-09-10 | [Harness Robotic OS](papers/2609.11225.md) · [Paper](https://arxiv.org/abs/2609.11225) | Organizes quadruped inspection skills, shared context, hierarchical memory, and controlled candidate updates into a unified runtime. |

@@ -1,0 +1,42 @@
+{
+  "checked_on": "2026-10-18",
+  "status": "partial",
+  "scope": "Version and title metadata from official abstract pages; not full-text re-review.",
+  "previously_curated_count": 45,
+  "batch_audit_error": "HTTP 429 after retries; no complete batch result obtained.",
+  "spot_checked_count": 4,
+  "records": [
+    {
+      "id": "2610.08761",
+      "name": "VeriFine",
+      "version": 1,
+      "title": "VeriFine: Scaling Verification for Self-Improvement in Embodied Reasoning",
+      "changed": false,
+      "source": "https://arxiv.org/abs/2610.08761"
+    },
+    {
+      "id": "2609.27612",
+      "name": "RegenHarness",
+      "version": 1,
+      "title": "RegenHarness: A Robot Agent Harness with Evidence-Gated Recursive Self-Improvement",
+      "changed": false,
+      "source": "https://arxiv.org/abs/2609.27612"
+    },
+    {
+      "id": "2609.20822",
+      "name": "SafeHarness",
+      "version": 2,
+      "title": "Coding Agents with Harness for Safe Robot Control",
+      "changed": false,
+      "source": "https://arxiv.org/abs/2609.20822"
+    },
+    {
+      "id": "2607.08448",
+      "name": "Harness VLA",
+      "version": 5,
+      "title": "Harness VLA: Steering Frozen VLAs into Reliable Manipulation Primitives via Memory-Guided Agents",
+      "changed": false,
+      "source": "https://arxiv.org/abs/2607.08448"
+    }
+  ]
+}
