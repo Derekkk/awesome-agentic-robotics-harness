@@ -10,7 +10,8 @@ This review primarily checked original abstracts and author project pages, rathe
 
 - [Research agenda and testable hypotheses](docs/research-agenda.md)
 - [Architecture comparison](docs/architecture-comparison.md)
-- [Latest review: 2026-10-18](reports/2026-10-18.md)
+- [Latest weekly digest: 2026-10-19](reports/2026-10-19.md) · [JSON delta](data/updates/2026-10-19.json)
+- [Latest curated-index review: 2026-10-18](reports/2026-10-18.md)
 - [Previous review: 2026-10-09](reports/2026-10-09.md)
 - [Initial review and corrections](reports/2026-09-22.md)
 - [Evaluation protocol](docs/evaluation-protocol.md) · [Evidence policy](docs/evidence-policy.md)

@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-19 — Weekly research digest
+
+- Archived the October 12–18 public-source digest with 18 reviewed entries and a structured JSON delta under `data/updates/`.
+- Recorded author-reported evidence, limitations, code availability, research hypotheses, and the 13-paper version check.
+- Kept the existing 52-paper curated index unchanged; the weekly delta is a review artifact, not an automatic merge into `data/papers.json`.
+- Added persistent navigation links in README and its renderer; retained the October 18 curated-index review.
+
 ## 2026-10-18 — Literature update
 
 - Added 7 primary-source-verified entries, bringing the index to 52 papers: CarryOn, Temporal Flow Policy, EmbodiedEvo, RoboSimStudio, EndoRSI, RoboRSI, and PhysEvo.
